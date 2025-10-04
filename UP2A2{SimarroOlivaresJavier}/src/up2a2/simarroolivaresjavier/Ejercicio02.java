@@ -17,11 +17,9 @@ import java.text.DecimalFormat;
 public class Ejercicio02 {
 
     public static void main(String[] args){
-        
-        System.out.println();
-        System.err.println();
+
         System.out.println("Indica una temperatura en grados celsius para calcular su valor en fahrenheit");
-        System.err.println("Porfabor introduce solo números con comas para decimales o dará error,");
+        System.err.println("Por favor introduce solo números con comas para decimales o dará error,");
         Scanner keyld = new Scanner(System.in);
         DecimalFormat df = new DecimalFormat("#.0");
         Double celsius =  keyld.nextDouble();

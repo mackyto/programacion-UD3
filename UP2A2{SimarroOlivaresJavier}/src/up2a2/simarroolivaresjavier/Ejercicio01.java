@@ -21,7 +21,7 @@ public class Ejercicio01 {
         Scanner keyld = new Scanner(System.in);
         DecimalFormat df = new DecimalFormat("#.00");
         System.out.println("Indica el precio para calcular el IVA (21%)");
-        System.err.println("Porfabor introduce solo números con comas para decimales o dará error,");
+        System.err.println("Por favor introduce solo números con comas para decimales o dará error,");
         Double cantidad=keyld.nextDouble();
         System.out.println("La cantidad de "+cantidad+" al  21% de IVA");
         System.out.println("Suma "+(df.format(cantidad*1.21))+"€ de precio Final");        

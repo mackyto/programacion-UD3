@@ -21,6 +21,7 @@ public class Ejercicio03 {
         Scanner keyld = new Scanner(System.in);
         DecimalFormat df = new DecimalFormat("#.00");
         System.out.print("La suma de la cuenta del restaurante es de ");
+        System.err.println("Por favor introduce solo números con comas para decimales o dará error,");
         Double suma = keyld.nextDouble();
         System.out.println("Al 10% de propina debes dar "+df.format(suma*0.1)+"€");
         System.out.println("Al 15% de propina, esta sube a "+df.format(suma*0.15)+"€");
