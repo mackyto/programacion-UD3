@@ -11,7 +11,7 @@ import java.text.DecimalFormat;
  *3. Desarrolla un programa que solicite el importe de una cuenta en un restaurante
  *   y calcule tres opciones de propina: 10%, 15% y 20%.
  * 
- * @author 29160712r
+ * @author Javier Simarro Olivares
  */
 
 public class Ejercicio03 {

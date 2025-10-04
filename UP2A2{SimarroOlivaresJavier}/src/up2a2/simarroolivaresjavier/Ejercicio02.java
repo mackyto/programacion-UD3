@@ -11,7 +11,7 @@ import java.text.DecimalFormat;
  * 2. Convierte una temperatura en grados Celsius a Kelvin, utilizando la fórmula apropiada,
  * partiendo de la temperatura dada por el usuario.
  * 
- * @author 29160712r
+ * @author Javier Simarro Olivares
  */
 
 public class Ejercicio02 {
