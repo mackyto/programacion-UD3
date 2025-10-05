@@ -4,7 +4,7 @@
  */
 
 package up2a2.simarroolivaresjavier;
-import java.util.Scanner;
+import java.util.Scanner; // Llamada a la clase Scanner.
 
 /**
  * 
@@ -17,8 +17,8 @@ public class Ejercicio04 {
     
     public static void main (String[] args){
 
-        Scanner keyld = new Scanner(System.in);
-        System.err.println("Por favor introduce solo números enteros o dará error");
+        Scanner keyld = new Scanner(System.in); // Se instansia el objeto keyboar-load (keyld) de entrada por teclado hasta salto de linea.
+        System.err.println("Por favor introduce solo números enteros o dará error"); // Aviso de limitación de introducción de tipos.
         System.out.print("Introduce el número de alumnos totales del curso ");
         int alumnos = keyld.nextInt();
         System.out.print("Introduce el numero máximo de alumnos por grupo ");

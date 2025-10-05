@@ -4,8 +4,8 @@
  */
 
 package up2a2.simarroolivaresjavier;
-import java.util.Scanner;
-import java.text.DecimalFormat;
+import java.util.Scanner; // Llamada a la clase Scanner.
+import java.text.DecimalFormat; // Llamada a la clase DecimalFormat.
 
 /**
  *
@@ -17,11 +17,11 @@ public class Ejercicio07 {
     
     public static void main(String[] args){
     
-        System.err.println("Por favor introduce solo números con comas para decimales o dará error");
+        System.err.println("Por favor introduce solo números con comas para decimales o dará error"); // Aviso de limitación de introducción de tipos.
         System.out.println("Se va a calcular la nota media de tres notas con tres decimale y redondeo");
         System.out.print("Por favor introduce la primera nota ");
-        Scanner keyld=new Scanner(System.in);
-        DecimalFormat df=new DecimalFormat("#.000");
+        Scanner keyld = new Scanner(System.in); // Se instansia el objeto keyboar-load (keyld) de entrada por teclado hasta salto de linea.
+        DecimalFormat df = new DecimalFormat("#.00"); // Se formatea el número de decimales con redondeo en la instancia 'df'.
         double nota=keyld.nextDouble();
         System.out.print("Ahora introduce la segunda nota ");
         nota+=keyld.nextDouble();

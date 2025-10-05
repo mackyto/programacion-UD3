@@ -4,7 +4,7 @@
  */
 
 package up2a2.simarroolivaresjavier;
-import java.util.Scanner;
+import java.util.Scanner; // Llamada a la clase Scanner.
 
 /**
  *
@@ -18,8 +18,9 @@ public class Ejercicio08 {
     public static void main(String[] args){
         
 //      1 megabyte (1 MB) = 2 elevadoa 20 bytes = 1048576 bytes = 1048576 B    
+        System.err.println("Por favor introduce solo números o dará error"); // Aviso de limitación de introducción de tipos.
         System.out.print("Introduce el valor en bytes (Palabras de 8 bits) ");
-        Scanner keyld = new Scanner(System.in);
+        Scanner keyld = new Scanner(System.in); // Se instansia el objeto keyboar-load (keyld) de entrada por teclado hasta salto de linea.
         final double CONVERSION = 1048576;
         Double bytes = keyld.nextDouble();
         System.out.println(bytes+"bytes equivalen a "+(int)(bytes/CONVERSION)+"MB");
