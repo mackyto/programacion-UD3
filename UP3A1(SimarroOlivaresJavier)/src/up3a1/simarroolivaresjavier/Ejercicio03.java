@@ -22,7 +22,7 @@ public class Ejercicio03 {
         System.out.print ("Indica tu edad o año de nacimiento completo ");
         int edadAno = kl.nextInt();
         
-        if (edadAno < 18 || edadAno > 1000 && edadAno < 2007){
+        if (edadAno < 18 || edadAno > 1000 && !(edadAno < 2007)){
             System.out.println("Eres menor de edad");
         }else{
             System.out.println("Eres mayor de edad");
