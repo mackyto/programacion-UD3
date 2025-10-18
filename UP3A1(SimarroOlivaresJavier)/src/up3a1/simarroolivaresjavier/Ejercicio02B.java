@@ -23,10 +23,10 @@ public class Ejercicio02B {
         int numero = kl.nextInt();
         
         System.out.print("Tu numero " + numero);
-
-        boolean resto = numero/2 != 0; int r = (int) resto;
         
-        switch (r){
+        int resto = numero%2 != 0 ? 1 : 0;
+        
+        switch (resto){
             
             case 0: System.out.println(" es Par");break;
                     
