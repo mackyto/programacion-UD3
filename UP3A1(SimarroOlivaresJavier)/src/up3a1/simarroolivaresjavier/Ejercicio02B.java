@@ -24,9 +24,9 @@ public class Ejercicio02B {
         
         System.out.print("Tu numero " + numero);
         
-        int resto = numero%2 != 0 ? 1 : 0;
+        boolean resto = numero%2 != 0;
         
-        switch (resto){
+        switch (resto ? 1:0){
             
             case 0: System.out.println(" es Par");break;
                     
