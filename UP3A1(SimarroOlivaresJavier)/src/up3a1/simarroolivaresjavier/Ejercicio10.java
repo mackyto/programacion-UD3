@@ -46,18 +46,24 @@ public class Ejercicio10 {
             System.out.print("<====================");
         }
 
-        System.err.printf("\n\n\tMayor de 300KWh/mes ");
+        System.out.printf("\n\n\tMayor de 300KWh/mes ");
         if (consumo>300){
-            System.err.print("<====================");
+            System.out.print("<====================");
         }        
 
-        System.out.println("–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––");        
-        System.out.printf("\n\nCon %.3fKWh al mes tu consumo  es ", consumo);
+        System.out.printf("\n\n\n–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––");        
+        System.out.printf("\n\nCon %.3fKWh al mes, tu consumo es ", consumo);
         
         if (consumo<100){
-            System.out.println("eficaz");
-        }else if 
-        
+            System.out.print("eficaz");
+        }else if (consumo <= 300){
+            System.out.print("normal");            
+        }else{
+            System.out.print("elevado");
+        }
+
+        System.out.printf(".\n\n–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––\n\n\n");        
+
     }
     
 }
