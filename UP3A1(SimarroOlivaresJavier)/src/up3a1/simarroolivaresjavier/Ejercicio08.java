@@ -53,7 +53,8 @@ public class Ejercicio08 {
             case 2: resultado = numero - operando; simbolo = "-" ;break;
             case 3: resultado = numero * operando; simbolo = "*" ;break;
             case 4: resultado = numero / operando; simbolo = "/" ;break;
-            default:break;
+            case 5: break;
+            default: System.out.println("sorpresa");break;
         }
         
         System.out.printf("\n");
