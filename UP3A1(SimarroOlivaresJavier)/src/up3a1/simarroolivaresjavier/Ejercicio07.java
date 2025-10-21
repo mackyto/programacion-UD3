@@ -20,7 +20,7 @@ import java.util.Scanner;
  *              d. 7-8: notable.
  * 
  *              e. 9-10: sobresaliente.
- 
+ *
  * @author 29160712r
  */
 
@@ -32,7 +32,7 @@ public class Ejercicio07 {
 
         System.out.println("–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––");        
         
-        System.out.printf("\tIntroduce tu nota ");
+        System.out.printf("\tIntroduce tu nota ");               
         double nota = kl.nextDouble();
         int notaInt = (int)nota;
 
@@ -43,7 +43,7 @@ public class Ejercicio07 {
         }else{
             System.out.printf("\n\n\tTu nota de %.2f corresponde a un", nota);
         }
-            
+ 
         switch(notaInt){
             case 0,1,2,3,4: System.out.print(" Suspenso");break;
             case 5:         System.out.print(" Aprobado");break;

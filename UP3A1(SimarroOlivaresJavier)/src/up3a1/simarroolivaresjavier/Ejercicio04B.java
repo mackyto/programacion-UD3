@@ -4,6 +4,7 @@
  */
 
 package up3a1.simarroolivaresjavier;
+import java.time.LocalDate;
 import java.util.Scanner;
 
 /**
@@ -21,34 +22,37 @@ import java.util.Scanner;
  * @author 29160712r
  */
 
-public class Ejercicio04 {
+public class Ejercicio04B {
 
     public static void main(String[] args){
         
         Scanner kl = new Scanner(System.in);
+        final int año = LocalDate.now().getYear();
         System.out.println("–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––");
         
         System.out.print("Introduce tu edad o año de nacimiento completo ");
-        int edadAno = kl.nextInt();
-        System.out.printf("–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––\n\n\n");
+        int edadAño = kl.nextInt();
         
-        if (edadAno>1000){
-            edadAno = 2025 - edadAno;
+        if (edadAño>1000){
+            edadAño = año - edadAño;
         }
-                
-        System.out.print("Con la edad de " + edadAno + " años eres ");
         
-        if (edadAno<18){
+        System.out.println("–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––");
+        
+        System.out.printf("\n\nCon la edad de %d años eres ", edadAño);
+        
+        if (edadAño<18){
             System.out.print("menor de edad");
-        }else if(edadAno<65){
+        }else if(edadAño<65){
             System.out.print("adulto");
         }else{
             System.out.print("anciano");
         }
         
-        System.out.println(".");
-        System.out.printf("\n\n–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––\n\n");
+        System.out.printf(".\n\n\n");
+        System.out.printf("–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––\n\n");
         
     }
+
     
 }

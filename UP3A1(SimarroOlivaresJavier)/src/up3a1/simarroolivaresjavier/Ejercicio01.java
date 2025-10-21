@@ -24,9 +24,11 @@ public class Ejercicio01 {
         // TODO code application logic here
     
         Scanner kl = new Scanner(System.in);
+        System.out.println("–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––");
         
         System.out.print("Introduzca su numero entero ");
         int numero = kl.nextInt();
+        System.out.printf("–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––\n\n\n");
     
         if (numero > 0){
             System.out.println("El número " + numero + ", es un numero positivo.");
@@ -35,7 +37,8 @@ public class Ejercicio01 {
         }else{
             System.out.println("El numero " + numero + ", es cero.");
         }  
-        
+        System.out.printf("\n\n–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––\n\n");
+
     }
     
 }
