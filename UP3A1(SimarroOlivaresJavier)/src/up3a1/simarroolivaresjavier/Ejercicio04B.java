@@ -27,14 +27,14 @@ public class Ejercicio04B {
     public static void main(String[] args){
         
         Scanner kl = new Scanner(System.in);
-        final int año = LocalDate.now().getYear();
+        final int AÑO = LocalDate.now().getYear();
         System.out.println("–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––");
         
         System.out.print("Introduce tu edad o año de nacimiento completo ");
         int edadAño = kl.nextInt();
         
         if (edadAño>1000){
-            edadAño = año - edadAño;
+            edadAño = AÑO - edadAño;
         }
         
         System.out.println("–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––");

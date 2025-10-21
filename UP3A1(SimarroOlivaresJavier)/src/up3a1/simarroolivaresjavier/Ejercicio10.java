@@ -8,14 +8,12 @@ import java.util.Scanner;
 
 /**
  *
- * 
  * 10. La eficiencia de la instalación eléctrica puede medirse según su consumo eléctrico
  *     mensual en kWh. Si el consumo es menor a 100 kWh, se considera un consumo eficiente.
  *     Si se encuentra entre 100 y 300 kWh, se considera un consumo medio.
  *     Por último, si es mayor de 300 kWh, se considera un consumo elevado.
  *     Escribe un programa que lea por teclado el consumo mensual en kWh e imprima por
  *     pantalla el tipo de consumo.
- * 
  * 
  * @author 29160712r
  */
