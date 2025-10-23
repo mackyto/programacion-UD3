@@ -12,11 +12,13 @@
  * @author macky
  */
 
-public class Ejercicio02 {
+public class Ejercicio02B {
 
     public static void main(String[] args){
         
-        for (int i = 3; i <= 9; i++){
+        for (int i = 1; i <= 15; i++){
+            if (i > 9){break;}
+            if (i < 3){continue;}
             
             System.out.print("  " + i);
             
