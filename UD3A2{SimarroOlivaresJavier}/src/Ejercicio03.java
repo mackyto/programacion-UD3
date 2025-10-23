@@ -13,18 +13,18 @@
 
 public class Ejercicio03 {
 
-    public static void main(String[] args){
-        
-        int suma = 0;
-        
-        for (int i = 1; i <= 20; i++){
-            
-            System.out.print(i + " + ");
-            suma +=i;
-            
-        }
-        System.out.printf("\b\b= %d\n\n",suma);
-        
-    }
-    
-}
+    public static void main(String[] args){                                     //
+                                                                                //
+        int suma = 0;                                                           //
+                                                                                //
+        for (int i = 1; i <= 20; i++){                                          //
+                                                                                //
+            System.out.print(i + " + ");                                        //
+            suma +=i;                                                           //
+                                                                                //
+        }                                                                       //
+        System.out.printf("\b\b= %d\n\n",suma);                                 //
+                                                                                //
+    }                                                                           //
+                                                                                //
+}                                                                               //
