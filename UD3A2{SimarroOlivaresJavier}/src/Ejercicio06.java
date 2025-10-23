@@ -67,7 +67,7 @@ public class Ejercicio06 {
 
         }
         System.out.println();System.out.println("------------------------------------------------------------------------------");
-        System.out.println("El mensaje contiene " + contadorJotas + " de jotas en total");
+        System.out.println("El mensaje contiene " + contadorJotas + " jotas en total");
         System.out.println("----------------------------------------");
         
     }
