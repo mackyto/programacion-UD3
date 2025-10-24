@@ -20,14 +20,14 @@ public class Ejercicio10 {
     
     public static void main(String[] args){
     
-        int contador = 1;
+        int contador = 0;
 
         do {
             
-            if(contador<10){System.out.print(" ");}
+            if(++contador<10){System.out.print(" ");}
             System.out.printf(" %d",contador);
 
-            if(contador++ % 5 == 0){System.out.printf("\n%s-----------------%s\n",ROJO,RESET);}
+            if(contador % 5 == 0){System.out.printf("\n%s-----------------%s\n",ROJO,RESET);}
             
         }while (contador<=15);
         
