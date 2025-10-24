@@ -11,20 +11,21 @@
  * @author macky
  */
 
-public class Ejercicio03 {
+public class Ejercicio03 {                                                      // Define la clase
 
-    public static void main(String[] args){                                     //
-                                                                                //
-        int suma = 0;                                                           //
-                                                                                //
-        for (int i = 1; i <= 20; i++){                                          //
-                                                                                //
-            System.out.print(i + " + ");                                        //
-            suma +=i;                                                           //
-                                                                                //
-        }                                                                       //
-        System.out.printf("\b\b= %d\n\n",suma);                                 //
-                                                                                //
-    }                                                                           //
-                                                                                //
-}                                                                               //
+    public static void main(String[] args){                                     // Define método main.
+
+        int suma = 0;                                                           // Inicializa el acumulador con el valor inicial.
+
+        for (int i = 1; i <= 20; i++){                                          // Define el bucle for de 1 a 20.
+
+            System.out.print(i + " + ");                                        // Imprime los valoress horizontalmente y añade el formato suma.
+            suma +=i;                                                           // Incrementa el acumulador con el valor del contador del bucle.
+ 
+        }                                                                       // Cierra el bucle for.
+
+        System.out.printf("\b\b= %d\n\n",suma);                                 // añade la suma (acumulador) y le da formato.
+
+    }                                                                           // Cierra el método.
+
+}                                                                               // Cierra la clase.

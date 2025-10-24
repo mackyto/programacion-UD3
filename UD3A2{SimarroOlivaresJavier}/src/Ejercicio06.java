@@ -48,28 +48,27 @@
  * @author macky
  */
 
-public class Ejercicio06 {
+public class Ejercicio06 {                                                      // Define la clase.
     
-    public static final String RESET = "\u001B[0m";
-    public static final String ROJO = "\u001B[31m";
+    public static final String RESET = "\u001B[0m";                             // Define el código ANSI de los colores originales de la interface SHELL.
+    public static final String ROJO = "\u001B[31m";                             // Define el código ANSI para el color del texto de la interface SHELL.
     
-    public static void main(String[] args){
+    public static void main(String[] args){                                     // Define el método.
         
-        final String MENSAJE = "El jabalí juerguista jugaba con desparpajo al fútbol con su viejo amigo Jaime";
-        int longitud = MENSAJE.length(),contadorJotas=0;
+        final String MENSAJE = "El jabalí juerguista jugaba con desparpajo al fútbol con su viejo amigo Jaime";  //Se define el mensage como constante.
+        int contadorJotas=0;                                                    // Inicializa el contador de otas.
         
-        for (int i = 0; i< longitud; i++){
-            
-            if (Character.toLowerCase(MENSAJE.charAt(i)) == 'j'){
-                contadorJotas++;
-                System.out.printf("%s%c%s",ROJO,MENSAJE.charAt(i),RESET);
-            }else{System.out.print(MENSAJE.charAt(i));}   
+        for (int i = 0; i< MENSAJE.length(); i++){                              // Inicia el bucle for desde 0 que es el primer char del mensaje hasta la longitud del mensaje menos uno (mientras sea menor no menor o igual) que es el rango valido de chars del mensaje.            
+            if (Character.toLowerCase(MENSAJE.charAt(i)) == 'j'){               // Comprueba si el char en minuscula corresponde con la j minuscula.
+                contadorJotas++;                                                // Si la comparacion a sido verdadera incrementa el contador de jotas.
+                System.out.printf("%s%c%s",ROJO,MENSAJE.charAt(i),RESET);       // Imprime el char en este caso una j en rojo y vuelve a reponer los colores de la interface
+            }else{System.out.print(MENSAJE.charAt(i));}                         // Si el char no es j se imprime aqui horizontalmente en color normal.y cierra el condicional y el else
 
-        }
-        System.out.println();System.out.println("------------------------------------------------------------------------------");
-        System.out.println("El mensaje contiene " + contadorJotas + " jotas en total");
-        System.out.println("----------------------------------------");
+        }                                                                       // Cierra el bucle for
+        System.out.printf("\n------------------------------------------------------------------------------\n");  // Formatea el espacio visual saltando de linea y añadiendo un separador. 
+        System.out.println("El mensaje contiene " + contadorJotas + " jotas en total");                           // Imprime la respuesta formateada.
+        System.out.println("----------------------------------------");         // Incluye un separador final y un salyo de linea.
         
-    }
+    }                                                                           // Cierra el método.
 
-}
+}                                                                               // Cierra la clase

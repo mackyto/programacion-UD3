@@ -11,17 +11,17 @@
  * @author macky
  */
 
-public class Ejercicio01 {
+public class Ejercicio01 {                                                      // Define la clase
     
-    public static void main(String[] args){
+    public static void main(String[] args){                                     // Define el método
         
         for (int i = 1; i <= 15; i++){                                          // Inicia un bucle for contando de 1 a 15. 
             if (i < 10){System.out.print(" ");}                                 // Ajuste de posición numeros de un difgito.
             System.out.print("   " + i);                                        // Imprime los numeros en la misma linea dejando espacios.
             if (i%3 == 0){System.out.printf("\n------------------\n");}         // Salta de línea cada tres numeros con linea separatoria.
             
-        }
+        }                                                                       // Cierra el bucle for
         System.out.println();                                                   // Salto de linea para separar Build Suceful.
-    }
+    }                                                                           // Cierra el método
 
-}
+}                                                                               // Cierra la Clase
