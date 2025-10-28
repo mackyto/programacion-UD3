@@ -28,13 +28,14 @@ public class Ejercicio02 {
             System.out.print("Introduce un numero positivo entero ");
             numero = kl.nextInt();
             
-            if(numero > 0){resultado += numero;}
+            if(numero > 0){
+                resultado += numero;}
                     
                     
                     
         }while(numero != 0);
        
-        System.out.println();
+        System.out.println(resultado);
         
         
     }
