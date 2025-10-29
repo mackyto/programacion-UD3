@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 /**
  *
- * Crea un programa que defina una contraseña en una constante y le pida al
+ * 3Crea un programa que defina una contraseña en una constante y le pida al
  * usuario que la introduzca. Si es correcta, mostrará un mensaje indicándolo.
  * Si no, tras tres intentos fallidos mostrará un mensaje de error.
  * 
@@ -39,7 +39,11 @@ public class Ejercicio03 {
                 System.out.println("Contraseña correcta");
                 break;
                 
-            }else if (i == 3){System.err.println("¡¡¡MAL111 has Fallado todos los intentos");}            
+            }else if (i == 3){
+                
+                System.err.println("¡¡¡MAL111 has Fallado todos los intentos");
+            
+            }            
             
         }
 
