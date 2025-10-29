@@ -15,6 +15,9 @@ import java.util.Scanner;
  */
 public class Ejercicio01 {
     
+    public static final String RESET = "\u001B[0m";
+    public static final String ROJO = "\u001B[31m";
+    
     public static void main (String[] args){
         
         Scanner kl = new Scanner(System.in);
@@ -22,18 +25,17 @@ public class Ejercicio01 {
         
         do{
             
-            System.out.println("\f");
-            
             System.out.print("Introduzca un número entre el 1 y el 10 ");
             numero = kl.nextInt();
         }while( numero < 1 || numero > 10);
         
         System.out.printf("\n\t Tabla del %d\n",numero);
-        System.out.printf("\t--------------\n");
+        System.out.printf("\t%s----------------\n", ROJO);
 
         for (int x = 1; x <= 10; x++){
             
-            System.out.printf("\t");
+            System.out.printf("\t|%s", RESET);
+
             if (numero < 10){System.out.print(" ");}
             System.out.printf("%d * ", numero);
             
@@ -43,9 +45,12 @@ public class Ejercicio01 {
             if (numero*x < 10){System.out.print(" ");}
             if (numero*x < 100){System.out.print(" ");}
             
-            System.out.printf(" %d\n", numero*x);
+            System.out.printf(" %d %s|\n", numero*x,ROJO);
                  
         }    
+    
+        System.out.printf("\t%s----------------%s\n\n", ROJO, RESET);
+
         
     }
     
