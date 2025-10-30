@@ -17,8 +17,12 @@ import java.util.Scanner;
 
 public class Ejercicio06 {
     
-    publi static voud main(String[] args){
+    public static void main(String[] args){
         
+        Scanner kl = new Scanner(System.in);
+        final int ADIVINA = (int)Math.random();
+        
+        System.out.print("Introduce un número entero del 1 al 10 ");
         
         
         
