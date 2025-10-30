@@ -29,7 +29,8 @@ public class Ejercicio05 {
         Scanner kl = new Scanner(System.in);
         
         final double EURODOLAR = 1.16, METROPIE = 3.28084;
-    
+        double euros = 0.0; metros = 0.0;
+        
         do {
     
             System.out.printf("\tDe Metrica a Imperial Menú\n");
@@ -43,11 +44,11 @@ public class Ejercicio05 {
             
             switch (opcion){
                 case "a": System.out.println("Introduce Euros ");
-                        double euros = kl.nextDouble();
+                        euros = kl.nextDouble();
                         System.out.printf("El resultado en dolares son %.2f$ ", euros*EURODOLAR);break;
                 case "b":  System.out.println("Introduce Metros ");
-                        double metros = kl.nextDouble();
-                        System.out.printf("El resultado en pis son %.2f$ ", euros*EURODOLAR);break;
+                        metros = kl.nextDouble();
+                        System.out.printf("El resultado en pies son %.2f$ ", metros*METROPIE);break;
     
             }        
         
