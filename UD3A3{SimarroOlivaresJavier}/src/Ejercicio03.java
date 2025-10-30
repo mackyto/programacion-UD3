@@ -7,9 +7,9 @@ import java.util.Scanner;
 
 /**
  *
- * 3Crea un programa que defina una contraseña en una constante y le pida al
- * usuario que la introduzca. Si es correcta, mostrará un mensaje indicándolo.
- * Si no, tras tres intentos fallidos mostrará un mensaje de error.
+ * 3. Crea un programa que defina una contraseña en una constante y le pida al
+ *    usuario que la introduzca. Si es correcta, mostrará un mensaje indicándolo.
+ *    Si no, tras tres intentos fallidos mostrará un mensaje de error.
  * 
  * @author 29160712r
  */
