@@ -29,30 +29,37 @@ public class Ejercicio05 {
         Scanner kl = new Scanner(System.in);
         
         final double EURODOLAR = 1.16, METROPIE = 3.28084;
-        double euros = 0.0; metros = 0.0;
+        double euros = 0.0, metros = 0.0;
+        String opcion = "";
         
         do {
-    
+            
             System.out.printf("\tDe Metrica a Imperial Menú\n");
             System.out.println("-----------------------------------------------------");
             System.out.printf("\ta. Cambio de divisa de Euros a Dolares\n\n");
             System.out.printf("\tb. Cambio de Longitud de Metros a Pies\n\n");
             System.out.printf("\tc. Salir\n");
             System.out.println("-----------------------------------------------------");
-    
-            String opcion = kl.nextLine();
+
+            do{
+                opcion = kl.nextLine();
+            }while(!opcion.equals("a") && !opcion.equals("b") && !opcion.equals("c"));
             
             switch (opcion){
-                case "a": System.out.println("Introduce Euros ");
-                        euros = kl.nextDouble();
-                        System.out.printf("El resultado en dolares son %.2f$ ", euros*EURODOLAR);break;
-                case "b":  System.out.println("Introduce Metros ");
-                        metros = kl.nextDouble();
-                        System.out.printf("El resultado en pies son %.2f$ ", metros*METROPIE);break;
-    
+                case "a":   System.out.print("Introduce Euros ");
+                            euros = kl.nextDouble();
+                            System.out.printf("El resultado en dolares son %.2f$ ", euros*EURODOLAR);
+                            opcion = "";break;
+
+                case "b":   System.out.print("Introduce Metros ");
+                            metros = kl.nextDouble();
+                            System.out.printf("El resultado en pies son %.2f$ ", metros*METROPIE);
+                            opcion = "";break;
             }        
-        
-        }while(opcion.equals("c"));
+            
+            System.out.println();System.out.println();System.out.println();
+            
+        }while(!opcion.equals("c"));
     
     }    
     
