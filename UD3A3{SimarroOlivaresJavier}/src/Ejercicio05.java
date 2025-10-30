@@ -21,6 +21,39 @@ import java.util.Scanner;
  */
 public class Ejercicio05 {
     
+    public static final String RESET = "\u001B[0m";
+    public static final String ROJO = "\u001B[31m";
+
+    public static void main(String[] args){
+    
+        Scanner kl = new Scanner(System.in);
+        
+        final double EURODOLAR = 1.16, METROPIE = 3.28084;
+    
+        do {
+    
+            System.out.printf("\tDe Metrica a Imperial Menú\n");
+            System.out.println("-----------------------------------------------------");
+            System.out.printf("\ta. Cambio de divisa de Euros a Dolares\n\n");
+            System.out.printf("\tb. Cambio de Longitud de Metros a Pies\n\n");
+            System.out.printf("\tc. Salir\n");
+            System.out.println("-----------------------------------------------------");
+    
+            String opcion = kl.nextLine();
+            
+            switch (opcion){
+                case "a": System.out.println("Introduce Euros ");
+                        double euros = kl.nextDouble();
+                        System.out.printf("El resultado en dolares son %.2f$ ", euros*EURODOLAR);break;
+                case "b":  System.out.println("Introduce Metros ");
+                        double metros = kl.nextDouble();
+                        System.out.printf("El resultado en pis son %.2f$ ", euros*EURODOLAR);break;
+    
+            }        
+        
+        }while(opcion.equals("c"));
+    
+    }    
     
     
 }
