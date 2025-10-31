@@ -15,7 +15,7 @@ import java.util.Scanner;
  * @author javsimoli
  */
 
-public class Ejercicio06 {
+public class Ejercicio06B {
     
     public static void main(String[] args){
         
