@@ -20,11 +20,19 @@ public class Ejercicio06 {
     public static void main(String[] args){
         
         Scanner kl = new Scanner(System.in);
-        final int ADIVINA = (int)Math.random();
+        final int ADIVINA = (int)Math.round(Math.random()*10);
+        int propuesta = 0;
         
+        System.out.println("Prueba a adivinar un número");
         System.out.print("Introduce un número entero del 1 al 10 ");
         
+        do {
         
+            propuesta = kl.nextInt();
+            if (propuesta < 1 || propuesta > 10){continue;}
+        
+            
+        }while(propuesta != ADIVINA);
         
     }
     
