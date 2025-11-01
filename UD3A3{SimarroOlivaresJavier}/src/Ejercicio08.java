@@ -13,6 +13,7 @@ import java.util.Scanner;
  * 
  * @author 29160712r
  */
+
 public class Ejercicio08 {
     
     public static final String RESET = "\u001B[0m";
@@ -26,52 +27,54 @@ public class Ejercicio08 {
         int contaChar1 = 0, contaChar2 = 0, contaChar3 = 0;
         int contaPalabra1 = 0, contaPalabra2 = 0, contaPalabra3 = 0;
         
-        System.out.printf("Danos tu opinión con una frase que no contenga las palabras %s, %s o %s:\n\n", PALABRA1, PALABRA2, PALABRA3);
+        System.out.printf("Danos tu opinión con una frase que no contenga las palabras %s%s, %s o %s%s:\n\n", ROJO, PALABRA1, PALABRA2, PALABRA3, RESET);
         String frase = kl.nextLine();
         
         for (int i = 0; i < frase.length(); i++){
+            
+            char caracter = Character.toLowerCase(frase.charAt(i));
            
-            if (Character.toLowerCase(frase.charAt(i)) == PALABRA1.charAt(contaChar1)) {
+            if (caracter == PALABRA1.charAt(contaChar1)) {
 
-                if (++contaChar1 == PALABRA1.length()){contaPalabra1++;}
+                if (++contaChar1 == PALABRA1.length()){contaPalabra1++; contaChar1 = 0;}
             
             }else{contaChar1 = 0;}
             
             
-            if (Character.toLowerCase(frase.charAt(i)) == PALABRA2.charAt(contaChar2)) {
+            if (caracter  == PALABRA2.charAt(contaChar2)) {
 
-                if (++contaChar2 == PALABRA2.length()){contaPalabra2++;}                
+                if (++contaChar2 == PALABRA2.length()){contaPalabra2++; contaChar2 = 0;}                
 
             }else{contaChar2 = 0;}
             
             
-            if (Character.toLowerCase(frase.charAt(i)) == PALABRA3.charAt(contaChar3)) {
+            if (caracter == PALABRA3.charAt(contaChar3)) {
             
-                if (contaChar3 == PALABRA3.length()){contaPalabra3++;}
+                if (++contaChar3 == PALABRA3.length()){contaPalabra3++; contaChar3 = 0;}
             
             }else{contaChar3 = 0;}
             
-            
-      
-
         
-        System.out.println(contaChar1 + "  " + contaPalabra1);
+//        System.out.println(contaChar3 + " "  + caracter + " " + contaPalabra3 + " " + i + " " + PALABRA3.charAt(contaChar3));
             
         }            
         
         if (contaPalabra1 != 0){
             System.out.printf("%s¡¡¡ERROR!!!has utilizado la palabra %s %d vez", ROJO,PALABRA1,contaPalabra1);
-        }
+            if (contaPalabra1 > 1){System.out.println("es");}
+        }else{System.out.println();}
             
         if (contaPalabra2 != 0){
             System.out.printf("%s¡¡¡ERROR!!!has utilizado la palabra %s %d vez", ROJO,PALABRA2,contaPalabra2);
-        }    
+            if (contaPalabra2 > 1){System.out.println("es");}
+        }else{System.out.println();}    
         
         if (contaPalabra3 != 0){
             System.out.printf("%s¡¡¡ERROR!!!has utilizado la palabra %s %d vez", ROJO,PALABRA3,contaPalabra3);
-        }
+             if (contaPalabra3 > 1){System.out.println("es");}
+        }else{System.out.println();}
 
-    //    System.out.println("Gracias por darnos tu opinión");
+        if(contaPalabra1 == 0 && contaPalabra2 == 0 && contaPalabra3 == 0){System.out.println("Gracias por darnos su opinión");}
         
     }
     
