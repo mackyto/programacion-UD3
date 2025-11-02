@@ -32,7 +32,9 @@ public class Ejercicio08 {
         for (int i = 0; i < frase.length(); i++){
             
             char caracter = Character.toLowerCase(frase.charAt(i));
-                
+            
+            if (caracter!= ' ' && caracter!= '.' && caracter!= ',' || i == frase.length()-1 && caracter!= '.' && caracter!= ',' ){palabra += caracter;}
+            
             if (caracter == ' ' || i == frase.length()-1){
                 
                 if(palabra.equals(PALABRA1)){
@@ -54,7 +56,7 @@ public class Ejercicio08 {
                 
                 palabra = "";
                 
-            }else{palabra += caracter;}
+            }
             
         }
 
