@@ -18,6 +18,7 @@ import java.util.Scanner;
  * 
  * @author 29160712r
  */
+
 public class Ejercicio10 {
     
 }

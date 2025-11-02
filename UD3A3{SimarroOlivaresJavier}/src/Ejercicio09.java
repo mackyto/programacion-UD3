@@ -13,44 +13,46 @@ import java.util.Scanner;
  * 
  * @author 29160712r
  */
-public class Ejercicio09 {
+public class Ejercicio09 {                                                      // Define la clase.
     
-    public static final String RESET = "\u001B[0m";
+    public static final String RESET = "\u001B[0m";                             // Colores ANSI de terminal, definidos en constantes.
     public static final String ROJO = "\u001B[31m";
     public static final String VERDE = "\u001B[32m";
     public static final String AMARILLO = "\u001B[33m";
     public static final String AZUL = "\u001B[34m";
     public static final String MAGENTA = "\u001B[35m";
     
-    public static void main(String[] args){
+    public static void main(String[] args){                                     // Define el método main.
         
-        Scanner kl = new Scanner(System.in);
+        Scanner kl = new Scanner(System.in);                                    // Define instancia escaner las variables y las inicia.
         double nota = 0.00;
         String color = RESET, espacio = "";
         
-        System.out.print("Indique cuantas notas va a introducir: ");
+        System.out.print("Indique cuantas notas va a introducir: ");            // solicita can tidad de notas lo carga en cantidad.
         int cantidad = kl.nextInt();
 
-        System.out.println("Introduzca las notas de 0 a 10, con o sin decimales. Se calcularan un máximo de tres decimales");
+        System.out.print("Introduzca las notas de 0 a 10, con o sin decimales.");
+        System.out.println(" Se incluyen un máximo de tres decimales");         // Mensaje de aclaración de tipo de entrada de datos (nota).
 
-        for(int i = cantidad; i>=1; i--){
+        
+        for(int i = cantidad; i>=1; i--){                                       // Inicio de bucle cantidad de notas decremental para apuntador de resto.
             
-            System.out.printf("Introduce la nota (quedan %d) ", i);
+            System.out.printf("Introduce la nota (quedan %d) ", i);             // Solicita y añade la nota al acumulador nota.
             nota += kl.nextDouble();
             
-        }
+        }                                                                       // Cierra el bucle.
         
-        nota/=cantidad;
+        nota/=cantidad;                                                         // Obtención e la nota media.
         
-        if(nota < 5){color = ROJO;}
-        else if (nota < 6){color = AMARILLO;}
+        if(nota < 5){color = ROJO;}                                             // Esquema de color de la impreión de la nota en base a su calificación.
+        else if (nota < 6){color = AMARILLO;}                                   // Atraves de la variable de cadena espacio.
         else if (nota < 7){color = AZUL;}
         else if (nota < 9){color = VERDE;}
         else if (nota <=10){color = MAGENTA;}
         
-        if(nota < 10){espacio = " ";}
+        if(nota < 10){espacio = " ";}                                           // Ajuste de tabula para notas de un digito.
         
-        System.out.println();
+        System.out.println();                                                   // Cuadro de impresión del resultado de Nota Media Final
         System.out.println("Nota Media");
         System.out.println(" ________");
         System.out.println("|        |");
@@ -58,6 +60,6 @@ public class Ejercicio09 {
         System.out.println("|________|");
         System.out.println();
         
-    }
+    }                                                                           // Cierra el metodo.
     
-}
+}                                                                               // Cierra la clase.
