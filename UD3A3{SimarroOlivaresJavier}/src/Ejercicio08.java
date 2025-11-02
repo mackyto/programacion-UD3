@@ -27,36 +27,39 @@ public class Ejercicio08 {
         String palabra = "";
         
         System.out.printf("Danos tu opinión con una frase que no contenga las palabras %s%s, %s o %s%s:\n\n", ROJO, PALABRA1, PALABRA2, PALABRA3, RESET);
-        String frase = kl.nextLine();
+        String frase = kl.nextLine(); System.out.println(ROJO);
         
         for (int i = 0; i < frase.length(); i++){
             
             char caracter = Character.toLowerCase(frase.charAt(i));
-            
-            if (caracter != ' '){
                 
-                palabra += caracter; 
+            if (caracter == ' ' || i == frase.length()-1){
                 
-            }else{
+                if(palabra.equals(PALABRA1)){
+                    
+                    System.out.printf("¡¡¡ERROR!!! Has usado palabras prohibidas, como '%s'.", PALABRA1);
+                    break;
                 
-                if(palabra.equals(PALABRA1)){System.out.println("Has usado palabras prohibidas");break;
+                }else if(palabra.equals(PALABRA2)){
+                    
+                    System.out.printf("¡¡¡ERROR!!! Has usado palabras prohibidas, como '%s'.", PALABRA2);
+                    break;
                 
-                }else if(palabra.equals(PALABRA2)){System.out.println("Has usado palabras prohibidas");break;
+                }else if(palabra.equals(PALABRA3)){
+                    
+                    System.out.printf("¡¡¡ERROR!!! Has usado palabras prohibidas, como '%s'.", PALABRA3);
+                    break;
                 
-                }else if(palabra.equals(PALABRA3)){System.out.println("Has usado palabras prohibidas");break;
+                }
                 
-                }else {palabra = "";}
+                palabra = "";
                 
-            
-                
-            }
+            }else{palabra += caracter;}
             
         }
 
-        System.out.println();
-        
-      //  if(contaPalabra1 == 0 && contaPalabra2 == 0 && contaPalabra3 == 0){System.out.println("Gracias por darnos su opinión");}
-        
+        System.out.println(RESET);System.out.println();
+                
     }
     
 }
