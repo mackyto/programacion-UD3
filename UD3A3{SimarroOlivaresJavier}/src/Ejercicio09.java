@@ -35,7 +35,7 @@ public class Ejercicio09 {
             
         }
         
-        System.out.print();
+        System.out.println();
         System.out.println("Nota Media");
         System.out.println(" ________");
         System.out.println("|        |");
