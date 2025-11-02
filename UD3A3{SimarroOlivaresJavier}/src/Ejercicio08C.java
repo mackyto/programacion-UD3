@@ -80,3 +80,5 @@ public class Ejercicio08C {
     }
     
 }
+
+// Mensaje de Prueba: Dos cabras llenan la piscina de meados y uno no puede dejar de mirar como catan en un momento trivial

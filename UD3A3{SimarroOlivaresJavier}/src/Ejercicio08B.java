@@ -55,7 +55,7 @@ public class Ejercicio08B {
                 
                 }
 
-                System.out.printf("%s %c",palabra,caracter);System.out.print(RESET);                
+                System.out.printf("%s ",palabra,caracter);System.out.print(RESET);                
                 palabra = "";
         
             }
@@ -67,3 +67,5 @@ public class Ejercicio08B {
     }
     
 }
+
+// Mensaje de Prueba: Dos cabras llenan la piscina de meados y uno no puede dejar de mirar como catan en un momento trivial
