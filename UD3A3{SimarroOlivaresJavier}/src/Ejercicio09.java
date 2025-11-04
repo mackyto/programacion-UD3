@@ -25,7 +25,7 @@ public class Ejercicio09 {                                                      
     public static void main(String[] args){                                     // Define el método main.
         
         Scanner kl = new Scanner(System.in);                                    // Define instancia escaner las variables y las inicia.
-        double nota = 0.00;
+        double nota = 0.00, dato = 0.00;
         String color = RESET, espacio = "";
         
         System.out.print("Indique cuantas notas va a introducir: ");            // solicita can tidad de notas lo carga en cantidad.
@@ -37,8 +37,14 @@ public class Ejercicio09 {                                                      
         
         for(int i = cantidad; i>=1; i--){                                       // Inicio de bucle cantidad de notas decremental para apuntador de resto.
             
-            System.out.printf("Introduce la nota (quedan %d) ", i);             // Solicita y añade la nota al acumulador nota.
-            nota += kl.nextDouble();
+            do{
+            
+                System.out.printf("Introduce la nota (quedan %d) ", i);         // Solicita la nota y comprueba que esta en el rango la guarda en dato.
+                dato = kl.nextDouble();
+            
+            }while(dato < 0 || dato > 10);
+            
+            nota += dato;                                                       // Acumula las notas válidas en nota.
             
         }                                                                       // Cierra el bucle.
         
