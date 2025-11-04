@@ -31,7 +31,7 @@ public class Ejercicio10 {
         
         Scanner kl = new Scanner(System.in);
     
-        System.out.println("Test de Uso Responsable del transporte");
+        System.out.println("Test de Uso Ecologicamente Responsable del transporte");
         System.out.println();
         System.out.println("Tienes que ir a un comercio en tu ciudad, está a 3Km ");
         System.out.println("de tu casa y tienes menos de una hora para ir y volver");
@@ -42,17 +42,26 @@ public class Ejercicio10 {
         System.out.printf("\tc. Ir en tranporte público.\n\n");
         System.out.printf("\td. Ir en automóvil.\n\n");        
         
-        char seleccion = kl.nextLine().charAt(0); System.out.println();
+        char seleccion = Character.toLowerCase(kl.nextLine().charAt(0)); System.out.println();
         
         switch (seleccion){
-            case 'a':System.out.printf("%sNo genera CO2, consume menos aire que ningún otro medio, pero no llegaras a tiempo.\n", AZUL);break;
-            case 'b':System.out.printf("%sNo genera CO2, consume mas aire que ir a pie pero podras llegar y volver a tiempo, esta es la opción ideal.\n", VERDE);break;
-            case 'c':System.out.printf("%sGenera  67 litros de CO2  por Km y persona pero es mas rapido y seguro que la bicicleta, no es la opció ideal.\n", AMARILLO);break;
-            case 'd':System.out.printf("%sGenera 150 litros de CO2  por Km y persona es el transporte mas rapido pero es el menos conveniente de todos.\n", ROJO);break;
+            
+            case 'a':
+                System.out.println("Andando");System.out.println();
+                System.out.printf("%sNo genera CO2, consume menos aire que ningún otro medio, pero no llegaras a tiempo.\n", AZUL);break;
+            case 'b':
+                System.out.println("Bicicleta");System.out.println();
+                System.out.printf("%sNo genera CO2, consume mas aire que ir a pie pero podras llegar y volver a tiempo, esta es la opción ideal.\n", VERDE);break;
+            case 'c':
+                System.out.print("AutoBus/Tren");System.out.println();
+                System.out.printf("%sGenera unos 65 litros de CO2  por Km y persona pero es mas rapido y seguro que la bicicleta, no es la opció ideal.\n", AMARILLO);break;
+            case 'd':
+                System.out.println("Automovil");System.out.println();
+                System.out.printf("%sGenera unos 150 litros de CO2  por Km y persona, es el transporte mas rapido pero es el menos conveniente de todos.\n", ROJO);break;
             
         }
                 
-        System.err.printf("\n\n%sRecuerda que con indices de PM2.5 superiores a 50 es dañino para la salud ir en bicicleta o andando, es mucho mas seguro el coche o el autobus.\n\n", RESET);
+        System.out.printf("\n\n%sRecuerda que con indices de PM2.5 superiores a 50 es dañino para la salud ir en bicicleta o andando, es mucho mas seguro el coche o el autobus.\n\n", ROJO);
         
         
     }
