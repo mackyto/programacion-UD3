@@ -49,7 +49,9 @@ public class Ejercicio01 {
         
         System.out.println("_________________________________________________________");
         System.out.println();
-                 
+        
+        kl.close();
+        
     }
     
     
