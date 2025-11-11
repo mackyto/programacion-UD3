@@ -42,7 +42,7 @@ public class Ejercicio05 {
             if (matriz[i] == n){contadorN++;}
         }
  
-        System.out.printf("\n\n%s%sEl número %d se", ROJO, FONDO_GRIS, n);      // imprime el resultado.
+        System.out.printf("\n\n%s%sEl número %d se", ROJO, FONDO_GRIS, n);      // imprime el resultado y se comprueban las espectativas.
         System.out.printf(" repite %d veces en el array\n\n", contadorN);
         
     }
