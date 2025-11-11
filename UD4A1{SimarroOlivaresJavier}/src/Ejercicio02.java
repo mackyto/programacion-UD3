@@ -44,8 +44,8 @@ public class Ejercicio02 {
 
         }
      
-        System.out.print(ROJO);
-        System.out.println("El acumulado de todos los precios es = " + acumulado);
+        System.out.println();
+        System.out.printf("%sEl acumulado de todos los precios es = %.2f€\n\n", ROJO, acumulado);
         
         kl.close();
         
