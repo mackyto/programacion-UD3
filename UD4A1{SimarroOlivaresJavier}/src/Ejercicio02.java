@@ -15,24 +15,38 @@ import java.util.Scanner;
  */
 public class Ejercicio02 {
     
+    public static final String RESET = "\u001B[0m";
+    public static final String ROJO = "\u001B[31m";
+    
     public static void main(String[] args){
         
         Scanner kl = new Scanner(System.in);
         
         double[] precios = new double[15];
+        double acumulado = 0;
         
         System.out.println("Se va a intruducir 15 precios de 15 productos");
         
-        for(int i = 0; i >= precios.length; i++){
+        for(int i = 0; i < precios.length; i++){
+ 
             do{
-                System.out.printf("Introduce el precio del articulo %d = ", i);
+            
+                System.out.printf("Introduce el precio del articulo %d = ", i+1);
                 precios[i] = kl.nextDouble();
-            }while(precios[i] < 0)
                 
-     
+            }while(precios[i] < 0);
+        
         }
         
-            
+        for (int i = 0; i < precios.length; i++){
+
+            acumulado += precios[i];
+
+        }
+     
+        System.out.print(ROJO);
+        System.out.println("El acumulado de todos los precios es = " + acumulado);
+        
         kl.close();
         
     }
