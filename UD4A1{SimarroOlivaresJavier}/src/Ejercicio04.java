@@ -27,16 +27,24 @@ public class Ejercicio04 {
         Scanner kl = new Scanner(System.in);                                    // Define la instancia Scanner kl
         
         double[] matriz = new double[100];                                      // Define el array matriz[100]
-        int acumulador = 0;
+        int contador = 0;
         
         for (int i = 0; i < 100; i++){matriz[i] = Math.random();}               // Rellena el array matriz[100] con cifras aleatorias de 0 a 1
         
-        System.out.print("Indica el valor de corte hasta tres decimales 0.000 a 1");
-        double corte = kl.nextDouble();
+        System.out.print("Indica el valor de corte hasta tres decimales 0.000 a 1 = ");
+        double corte = kl.nextDouble();                                         // Valor de corte 
         
-        for (int i = 0; i < matriz.length)
+        for (int i = 0; i < matriz.length; i++){                                // Cálculo de los indices de rango superior en contador.
         
+            if (matriz[i] > corte){contador++;}
         
+        }
+        
+        System.out.printf("\n\n%s%sEl total de valores", FONDO_GRIS, ROJO);     // Impresion de resultados con formato.
+        System.out.printf(" de la matriz superiores a %.3f", corte);
+        System.out.printf(" son %d que equivale al %d%%\n\n", contador, contador);
+        
+        kl.close();                                                             // cierra la instancia
         
     }
     
