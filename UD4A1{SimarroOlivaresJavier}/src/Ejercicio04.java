@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
+import java.util.Scanner;
+
 /**
  *
  * 4. Escribe un programa que, para una simulación científica, cree un array de
@@ -13,6 +15,29 @@
  * 
  * @author macky
  */
+
 public class Ejercicio04 {
+
+    public static final String RESET = "\u001B[0m";                             // Define colores ANSI
+    public static final String ROJO = "\u001B[031m";
+    public static final String FONDO_GRIS = "\u001B[47m";
+    
+    public static void main(String[] args){
+        
+        Scanner kl = new Scanner(System.in);                                    // Define la instancia Scanner kl
+        
+        double[] matriz = new double[100];                                      // Define el array matriz[100]
+        int acumulador = 0;
+        
+        for (int i = 0; i < 100; i++){matriz[i] = Math.random();}               // Rellena el array matriz[100] con cifras aleatorias de 0 a 1
+        
+        System.out.print("Indica el valor de corte hasta tres decimales 0.000 a 1");
+        double corte = kl.nextDouble();
+        
+        for (int i = 0; i < matriz.length)
+        
+        
+        
+    }
     
 }
