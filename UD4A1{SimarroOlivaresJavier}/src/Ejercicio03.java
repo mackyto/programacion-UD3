@@ -23,10 +23,12 @@ public class Ejercicio03 {
 
     public static void main(String[] args){                                     // Inicia el método main
         
-        Scanner kl = new Scanner(System.in);
+        Scanner kl = new Scanner(System.in);                                    // Inicia la instancia Scanner con el nombre kl (Keyboard Load)
         
-        System.out.printf("%sPor fabor indique el número de registros a tratar %s", ROJO, RESET);
+        System.out.printf("%sPor fabor indique el número ", ROJO);
+        System.out.printf("de registros a tratar %s", RESET);
         int cantidad = kl.nextInt();
+        
         double[] registro = new double[cantidad];                               // Obtiene el tamaño del array y lo inicia
         
         for (int i = 0; i < cantidad;){

@@ -26,11 +26,11 @@ public class Ejercicio05 {
         
         Scanner kl = new Scanner(System.in);                                    // Define la instancia Scanner
 
-        int[] matriz = new int[100];
+        int[] datos = new int[100];
         int contadorN = 0, n = 0;
         
-        for(int i = 0; i < matriz.length; i++){                                 // Carga el array matriz con valores enteros aleatorios de 1 a 10.
-            matriz[i] = (int)(1+Math.random()*10);
+        for(int i = 0; i < datos.length; i++){                                 // Carga el array matriz con valores enteros aleatorios de 1 a 10.
+            datos[i] = (int)(1+Math.random()*10);
         }
         
         do{                                                                     // Carga el numero solicitado N con rango limitado de 1 a 10.
@@ -38,12 +38,14 @@ public class Ejercicio05 {
             n = kl.nextInt();
         }while(n < 1 || n > 10);
     
-        for (int i = 0; i < matriz.length; i++){                                // comprueba cuantas veces se repitre N en el array, estadisticamente alrededor del 10%,
-            if (matriz[i] == n){contadorN++;}
+        for (int i = 0; i < datos.length; i++){                                // comprueba cuantas veces se repitre N en el array, estadisticamente alrededor del 10%,
+            if (datos[i] == n){contadorN++;}
         }
  
         System.out.printf("\n\n%s%sEl número %d se", ROJO, FONDO_GRIS, n);      // imprime el resultado y se comprueban las espectativas.
         System.out.printf(" repite %d veces en el array\n\n", contadorN);
+    
+        kl.close();                                                             // Cierra la instancia Scanner.
         
     }
     
