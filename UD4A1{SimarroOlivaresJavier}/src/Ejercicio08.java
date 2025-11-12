@@ -24,7 +24,7 @@ public class Ejercicio08 {
         
         Scanner kl = new Scanner(System.in);                                    // Inicia la instancia Scaner.
         
-        double[] notas = new double[10];                                        // Define el array para las notas.
+        double[] notas = new double[20];                                        // Define el array para las notas.
         double acumulador = 0;
         
         System.out.println("Se van a introducir 20 notas del 0 al 10");         // Informción del proceso
