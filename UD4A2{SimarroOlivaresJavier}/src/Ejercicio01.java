@@ -38,38 +38,51 @@ public class Ejercicio01 {
         
         Scanner kl = new Scanner(System.in);                                    // Inicia la instancia Scanner.
         
-        double[] probabilis = new double[5];                                   // Define los arrays necesarios.
+        double[] probabilis = new double[5];                                    // Define los arrays necesarios.
         String[] nombres = new String[5];
-        int proba = 0, probaAcum = 0;
+        int proba = 0, probaAcum;
         
-        for (int i = 0; i < nombres.length; i++){                            // Bucle de escritura de datos
+        for (int i = 0; i < nombres.length; i++){                               // Bucle de escritura de datos del nombre.
             System.out.printf("Rellena el nombre de la carta %d ",i+1);
             nombres[i] = kl.nextLine();
- }
-        do{
+        }
+
+        do{                                                                     // Bucle de repetición probabilidad menor que uno. 
+
+            probaAcum = 0;
             
+            for (int i =0; i < probabilis.length; i++){                         // Bucle de escritura de array de probabilidades.
             
-            for (int i =0; i < probabilis.length; i++){
-            
-                do{
-                    if (probaAcum > 100){probaAcum -= proba;}
-                    System.out.printf("Indica la probabilidad de la carta %s. La probabilidad restante es %d%%", nombres[i], 100-probaAcum);
+                do{                                                             // Bucle de repetición probabilidades sobre pasadas.
+                    if (probaAcum > 100){probaAcum -= proba;}                   // Recupereción de valor anterior ante repetición por exeso.
+                    System.out.printf("Indica la probabilidad de la carta %s. La probabilidad restante es %d%% registro %d ", nombres[i], 100-probaAcum, i);
                     proba = kl.nextInt();
                     probaAcum += proba;
+                    
+                }while(probaAcum > 100);                                        // Condición de repetición por sobre pasar valor de probabilidad.
                 
-                    System.out.println(probaAcum > 100);
-                        
-                }while(probaAcum > 100);
-                
-                probabilis[i]=proba/100;
+                probabilis[i]=proba;probabilis[i]/=100;                         // Recarga la matriz.
+//                System.out.printf("%f %d ",probabilis[i],proba);                
+
             }
-        }while(!(probaAcum == 100));    
+
+        }while(!(probaAcum == 100));                                            // Condición de repetición por defecto de valor de probabilidad.
             
+//        for (int i = 0; i < probabilis.length; i++){System.out.printf("%f %s ",probabilis[i],nombres[i]);}
+
+        double elecion = Math.random();
+        probaAcum = 0; 
+        int i = 0;
+
+        do{
+
+            probaAcum += probabilis[i++];
+
+        }while(elecion  <=  probaAcum);
+        
+        System.out.println("La carta ganadora es " + nombres[--i]);
         
         System.out.println();
-        
-        
-        
         
     }
     

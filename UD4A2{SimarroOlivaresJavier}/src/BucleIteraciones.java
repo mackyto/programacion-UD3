@@ -1,12 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 import java.util.Scanner;
-/**
- *
- * @author javsimoli
- */
+
 public class BucleIteraciones {
     public static void main(String[] args){
         
@@ -28,11 +21,9 @@ public class BucleIteraciones {
             
         }
     
-        System.out.println("");
+        System.out.println("Fin del programa");
             debug_test = 6;
         
-        
     }
-    
     
 }
