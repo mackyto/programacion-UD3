@@ -54,9 +54,9 @@ public class Ejercicio10 {
             
         }
         
-            System.out.printf("La altura máxima del jugador %d es", indAltMax,alturas[indAltMax]);
-            System.out.printf("La altura mínima del jugador %d es", indAltMin,alturas[indAltMin]);            
-            System.out.printf("La alturadedia de todos es  %.2f", media);       // Impresión de los resultados del ejercicio.
+            System.out.printf("\n\n%sLa altura máxima del jugador %d es %.2f", AZUL, indAltMax,alturas[indAltMax]);
+            System.out.printf("\n\n%sLa altura mínima del jugador %d es %.2f", ROJO, indAltMin,alturas[indAltMin]);            
+            System.out.printf("\n\n%sLa altura media de todos es  %.2f\n\n", RESET, media);       // Impresión de los resultados del ejercicio.
            
     kl.close();                                                                 // Cierra la instancia Scanner
         
