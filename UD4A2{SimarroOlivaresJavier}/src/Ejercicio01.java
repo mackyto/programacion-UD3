@@ -1,0 +1,76 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+import java.util.Scanner;
+
+/**
+ *
+ * 1. Escribe un programa que lea por teclado el nombre de 10 cartas y su 
+ *    probabilidad (la suma de todas las probabilidades debe ser 1).
+ *
+ *    Utiliza dos arrays: 
+ * 
+ *       uno para representar el nombre
+ *       otro para la probabilidad. 
+ * 
+ *    Las posiciones de ambos deben corresponderse. A continuación, saca un
+ *    número aleatorio entre 0.0 y 1.0 y muestra por pantalla qué carta ha
+ *    tocado (habrá tocado la carta que, al sumar las probabilidades acumuladas,
+ *    esta suma sea mayor o igual que el número aleatorio. Por ejemplo, si la
+ *    primera carta tiene una probabilidad del 0.2, la segunda del 0.3, la 
+ *    tercera del 0.1 y el número aleatorio es 0.55, la carta que habrá tocado 
+ *    será la tercera, puesto que la suma de las probabilidades de la primera 
+ *    y la segunda carta no llegan al número obtenido aleatoriamente)
+ * 
+ * @author javsimoli
+ */
+
+public class Ejercicio01 {
+
+    public static final String RESET = "\u001B[0m";                             // Define colores ANSI en constantes.
+    public static final String ROJO = "\u001B[31m";
+    public static final String AZUL = "\u001B[34m";
+    public static final String FONDO_GRIS = "\u001B[47m";
+    
+    public static void main(String[] args){                                     // Define método main.
+        
+        Scanner kl = new Scanner(System.in);                                    // Inicia la instancia Scanner.
+        
+        double[] probabilis = new double[5];                                   // Define los arrays necesarios.
+        String[] nombres = new String[5];
+        int proba = 0, probaAcum = 0;
+        
+        for (int i = 0; i < nombres.length; i++){                            // Bucle de escritura de datos
+            System.out.printf("Rellena el nombre de la carta %d ",i+1);
+            nombres[i] = kl.nextLine();
+ }
+        do{
+            
+            
+            for (int i =0; i < probabilis.length; i++){
+            
+                do{
+                    if (probaAcum > 100){probaAcum -= proba;}
+                    System.out.printf("Indica la probabilidad de la carta %s. La probabilidad restante es %d%%", nombres[i], 100-probaAcum);
+                    proba = kl.nextInt();
+                    probaAcum += proba;
+                
+                    System.out.println(probaAcum > 100);
+                        
+                }while(probaAcum > 100);
+                
+                probabilis[i]=proba/100;
+            }
+        }while(!(probaAcum == 100));    
+            
+        
+        System.out.println();
+        
+        
+        
+        
+    }
+    
+}
