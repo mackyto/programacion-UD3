@@ -24,8 +24,22 @@ public class Ejercicio09 {
         
         Scanner kl = new Scanner(System.in);                                    // Incia la instancia Scaner.
         
+        System.out.print("Indica el origen entero de la secuencia ");           // solicita los datos origen salto y cantidad
+        int origen = kl.nextInt();
+         
+        System.out.print("Indica el salto entre cada eiemento de la secuencia ");
+        int salto = kl.nextInt();
+         
+        System.out.print("Indica la cantidad de valores de la secuencia ");
+        int cantidad = kl.nextInt();
         
+        int[] datos = new int[cantidad];                                        // Define el array
+                
+        for (int i = 0; i < cantidad; i++){                                     // Bucle de rellenado de datos
+            datos[i] = origen + salto * i;
+        }
         
+        for(int i = 0; i < cantidad; i ++){System.out.print(datos[i] + " // " );}
         
         kl.close();                                                             // cierra la instancia Scanner.
         
