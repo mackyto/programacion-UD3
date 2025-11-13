@@ -17,27 +17,27 @@ import java.util.Arrays;
 
 public class Ejercicio02 {
 
-    public static final String RESET = "\u001B[0m";
-    public static final String ROJO = "\u001B[31m";
-    public static final String AZUL = "\u001B[34m";
-    public static final String FONDO_GRIS = "\u001B[47m";
+//    public static final String RESET = "\u001B[0m";
+//    public static final String ROJO = "\u001B[31m";
+//    public static final String AZUL = "\u001B[34m";
+//    public static final String FONDO_GRIS = "\u001B[47m";
             
-    public static void main(String[] arg){
+    public static void main(String[] arg){                                      // Declara el metodo main.
         
-        int[] datos = {0,4,2,6,8,3};
+        int[] datos = {0,4,2,6,8,3};                                            // Inincia el vector con valores deordenados.
 
-        System.out.printf("datos{");         
+        System.out.printf("datos{");                                            // Imprime el vector desordenada.
         for (int i = 0; i < datos.length; i++){
             System.out.printf("%d, ", datos[i]);
         }System.out.printf("\b\b} Ordenación original.\n"); 
         
-        Arrays.sort(datos);
+        Arrays.sort(datos);                                                     // Ordena de forma ascendente los valores del vector
 
-        System.out.printf("datos{");        
+        System.out.printf("datos{");                                            // Imprime el vector ordenado.
         for (int i = 0; i < datos.length; i++){
             System.out.printf("%d, ", datos[i]);
-        }
-        System.out.printf("\b\b} Ordenados por orden ascendente.\n\n");
+        }System.out.printf("\b\b} Ordenados por orden ascendente.\n\n");
+    
     }
             
 }
