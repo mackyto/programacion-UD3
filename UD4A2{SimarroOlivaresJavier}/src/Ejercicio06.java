@@ -15,7 +15,7 @@
 
 public class Ejercicio06 {
     
-    public static final String RESET = "\u001B[0m";
+    public static final String RESET = "\u001B[0m";                             // Define colores ANSI en constantes.
     public static final String ROJO = "\u001B[31m";
 
     public static void main(String[] args){                                     // Declara el método main.
@@ -32,15 +32,18 @@ public class Ejercicio06 {
             }
 
         }
-
         
-        System.out.printf("\n\nmatriz");
+        
+        System.out.println();System.out.println();  
+        System.out.println("---------------------------------------------------------------");        
+        System.out.printf("matriz");
         for (int i =0; i < matriz.length; i++){                                 // Bucle exterior impresión de Matriz (filas).
             System.out.printf("\t{");
             for (int j = 0; j < matriz[i].length; j++){                         // Bucle anidado interior (columnas). 
                 if(i==j){System.out.print(ROJO);}else{System.out.print(RESET);} // Selector de color de la impresión
                 System.out.printf("%f, ", matriz[i][j]);                        // Impresión de los valores seleccionados de la Matriz.
             }System.out.printf("\b\b}\n");}
+        System.out.println("---------------------------------------------------------------");        
         
         
         for (int i = 0; i < matriz.length; i++){                                // Bucle de calculo de la traza de la diagonal principal de la matriz cuadrada.
@@ -48,8 +51,8 @@ public class Ejercicio06 {
             traza += matriz[i][i];                                              // acumula los valores de la diagonal
         
         }
-        System.out.println();System.out.println();        
-        System.out.println(ROJO + "La traza de la diagonal principal es igual a " + traza);
+        System.out.println(RESET);System.out.println();        
+        System.out.println("La traza de la diagonal principal es " + ROJO + "tr(matriz) = " + traza);
         System.out.println();System.out.println();
     }
     
