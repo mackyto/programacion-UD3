@@ -17,6 +17,7 @@ public class Ejercicio06 {
     
     public static final String RESET = "\u001B[0m";                             // Define colores ANSI en constantes.
     public static final String ROJO = "\u001B[31m";
+    public static final String AZUL = "\u001B[34m";
 
     public static void main(String[] args){                                     // Declara el método main.
                 
@@ -52,7 +53,7 @@ public class Ejercicio06 {
         
         }
         System.out.println(RESET);System.out.println();        
-        System.out.println("La traza de la diagonal principal es " + ROJO + "tr(matriz) = " + traza);
+        System.out.println(AZUL + "La traza de la diagonal principal es tr(matriz) = " + traza);
         System.out.println();System.out.println();
     }
     
