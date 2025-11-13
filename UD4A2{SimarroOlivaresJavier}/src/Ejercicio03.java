@@ -35,15 +35,17 @@ public class Ejercicio03 {
             newvec[i] = vector[i+vector.length/2];
         }
         
-        System.out.print("vector{");                                            // imprime el vector original
+        System.out.print("vector{");                                            // Imprime el vector original
         for (int i = 0; i < vector.length; i++){
             System.out.printf("%d, ", vector[i]);
         }System.out.printf("\b\b}\n");System.out.println();
         
-        System.out.print("newvec{");                                            // imprime el vector copiado
+        System.out.print("newvec{");                                            // Imprime el vector copiado
         for (int i = 0; i < newvec.length; i++){
             System.out.printf("%d, ", newvec[i]);
-        }System.out.printf("\b\b}\n");System.out.println();       
+        }System.out.printf("\b\b}\n");System.out.println();
+        
+        kl.close();                                                             // Cierra la instancia Scanner.
         
     }
     

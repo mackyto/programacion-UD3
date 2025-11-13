@@ -86,6 +86,8 @@ public class Ejercicio01 {
         System.out.printf("\n\nLa carta ganadora es %s con la probabilidad de %f y un acumulado de %f\n\n", nombres[--i], elecion, acum);
         System.out.println();                                                   // Imprime los resultados.
 
+        kl.close();                                                             // Cierra la instancia Scanner.
+        
     }
 
 }
