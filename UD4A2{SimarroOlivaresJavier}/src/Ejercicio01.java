@@ -33,57 +33,59 @@ public class Ejercicio01 {
     public static final String ROJO = "\u001B[31m";
     public static final String AZUL = "\u001B[34m";
     public static final String FONDO_GRIS = "\u001B[47m";
-    
+
     public static void main(String[] args){                                     // Define método main.
-        
+
         Scanner kl = new Scanner(System.in);                                    // Inicia la instancia Scanner.
-        
-        double[] probabilis = new double[5];                                    // Define los arrays necesarios.
-        String[] nombres = new String[5];
+
+        double[] probabilis = new double[10];                                    // Define los arrays necesarios.
+        String[] nombres = new String[10];
         int proba = 0, probaAcum;
-        
+
         for (int i = 0; i < nombres.length; i++){                               // Bucle de escritura de datos del nombre.
+            if(i%2 == 1){System.out.print(FONDO_GRIS);}
             System.out.printf("Rellena el nombre de la carta %d ",i+1);
             nombres[i] = kl.nextLine();
         }
 
+        System.out.printf("\n\n\n");
+
         do{                                                                     // Bucle de repetición probabilidad menor que uno. 
 
             probaAcum = 0;
-            
+
             for (int i =0; i < probabilis.length; i++){                         // Bucle de escritura de array de probabilidades.
-            
+
                 do{                                                             // Bucle de repetición probabilidades sobre pasadas.
                     if (probaAcum > 100){probaAcum -= proba;}                   // Recupereción de valor anterior ante repetición por exeso.
-                    System.out.printf("Indica la probabilidad de la carta %s. La probabilidad restante es %d%% registro %d ", nombres[i], 100-probaAcum, i);
+                    if(i%2 == 1){System.out.print(FONDO_GRIS);}
+                    System.out.printf("Asigna la probabilidad de aparecer de la carta %s registro %d. La probabilidad restante es %d%% ", nombres[i], i+1, 100-probaAcum);
                     proba = kl.nextInt();
                     probaAcum += proba;
-                    
+
                 }while(probaAcum > 100);                                        // Condición de repetición por sobre pasar valor de probabilidad.
-                
-                probabilis[i]=proba;probabilis[i]/=100;                         // Recarga la matriz.
-//                System.out.printf("%f %d ",probabilis[i],proba);                
+
+                probabilis[i]=proba;probabilis[i]/=100;                         // Recarga la matriz.            
 
             }
 
         }while(!(probaAcum == 100));                                            // Condición de repetición por defecto de valor de probabilidad.
-            
-//        for (int i = 0; i < probabilis.length; i++){System.out.printf("%f %s ",probabilis[i],nombres[i]);}
 
-        double elecion = Math.random();
-        probaAcum = 0; 
-        int i = 0;
+//        for (int i = 0; i < probabilis.length; i++)                           // Imprime el array de probabilidades.
+//        {System.out.printf("%f %s ",probabilis[i],nombres[i]);}
 
-        do{
+        double elecion = Math.random(), acum = 0;                               // Carga la selección aleatoria.
+        int i = 0;                                                              // inicialización de variables.
 
-            probaAcum += probabilis[i++];
+        do{                                                                     // Bucle en busca de la carta escogida.
 
-        }while(elecion  <=  probaAcum);
-        
-        System.out.println("La carta ganadora es " + nombres[--i]);
-        
-        System.out.println();
-        
+            acum += probabilis[i++];                                            //
+
+        }while(elecion  >=  acum);                                              // Condicion de salida superada probabilidad.
+
+        System.out.printf("\n\nLa carta ganadora es %s con la probabilidad de %f con un acumulado de %f\n\n", nombres[--i], elecion, acum);
+        System.out.println();                                                   // Imprime los resultados.
+
     }
-    
+
 }
