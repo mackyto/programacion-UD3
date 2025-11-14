@@ -39,35 +39,42 @@ public class Ejercicio07 {
 
         do{                                                                     // Bucle principal de actualización de datos.
             
+            System.out.println();
+            System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
             System.out.println("Para salir introduce '-1' en cualquier entrada del datos");
             System.out.println();
  
-            System.out.print(VERDE + "Indica la Línea o Array de 1-20 ");        // Indica la fila, sale con -1
-            linea = kl.nextInt();
+            do{                                                                 // Indica la fila de 0 a 19, sale con -1.
+                System.out.print(VERDE + "Indica la Línea o Array de 1 a " + numeros.length + " ");   
+                linea = kl.nextInt();
+            }while (linea < -1 || linea > numeros.length);
             if(linea == -1){break;}
             
-            System.out.print(VERDE + "Indica la Columna o Registro de 1-20 ");  // Indica la columna, sale con -1 
-            columna = kl.nextInt();
+            do{                                                                 // Indica la columna de 0 a 19, sale con -1.
+                System.out.print(VERDE + "Indica la Columna o Registro de 1 a " + numeros[0].length + " ");
+                columna = kl.nextInt();
+            }while (columna < -1 || columna > numeros[0].length);
             if(columna == -1){break;}
             
-            do{                                                                 // Introduce el data desde -1 hasta 999 de lo contrario repite 
-            System.out.print(AZUL + "Indica el valor del Registro <1000 ");
-            data = kl.nextInt();
+            do{                                                                 // Introduce el data desde -1 hasta 999 de lo contrario repite con -1 sale.
+                System.out.print(AZUL + "Indica el valor del Registro <1000 ");
+                data = kl.nextInt();                
+            }while (data < -1 || data > 999);
             if(data == -1){break;}
-            }while (data < 0 || data > 999);
             
-            numeros[--linea][--columna] = data;                                 // Actualiza la matriz de datos y la booleana de gestión de color
+            numeros[--linea][--columna] = data;                                 // Actualiza la matriz de datos y la booleana de gestión de color.
             cambios[linea][columna] = true;
         
-        }while(true);                                                           // cierra el Bucle sin condición
+        }while(true);                                                           // cierra el Bucle sin condición.
         
-        System.out.println();System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
+        System.out.println("");
+        System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
         
         for (int i =0; i < numeros.length; i++){                                // Bucle exterior impresión de Matriz (filas).
         
             System.out.printf("%snumeros[", AZUL);
             if(i<9){System.out.print(" ");}
-            System.out.printf("%d]%s{", i+1,RESET);
+            System.out.printf("%d]%s{", i+1, RESET);
             
             for (int j = 0; j < numeros[i].length; j++){                         // Bucle anidado interior (columnas). 
 
@@ -88,11 +95,11 @@ public class Ejercicio07 {
 //                if (numeros[i][j] < 10000000 && numeros[i][j] > -10000000){
 //                    System.out.print(" ");}
                 
-                if(cambios[i][j]){                                              // Controla el color de las modificadas
-                    System.out.print(ROJO);
+                if(cambios[i][j]){                                              // Controla el color de las modificadas.
+                    System.out.print(ROJO);cambios[i][j]=false;
                 }else{System.out.print(RESET);}
                 
-                System.out.printf("%d, ", numeros[i][j]);                       // Impresión de los valores seleccionados de la Matriz. 
+                System.out.printf("%d%s, ", numeros[i][j], RESET);              // Impresión de los valores seleccionados de la Matriz. 
                 
             }
         
