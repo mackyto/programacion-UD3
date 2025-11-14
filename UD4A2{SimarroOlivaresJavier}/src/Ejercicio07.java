@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
+import java.util.Scanner;
+
 /**
  *
  * 7. Escribe un programa que cree una matriz de números enteros de tamaño 20x20
@@ -14,5 +16,22 @@
  * @author macky
  */
 public class Ejercicio07 {
+    
+    public static void main(String[] args){
+        
+        Scanner kl = new Scanner(System.in);
+        int[][] numeros = new int[20][20];
+        int fila = 0, columna = 0, data = 0;
+        
+        do{
+            
+            System.out.print("");
+            
+            
+        }while(data != -1);
+        
+        
+    }
+    
     
 }
