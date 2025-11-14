@@ -37,13 +37,12 @@ public class Ejercicio07 {
                 numeros[i][j] = i + j;cambios[i][j] = false;
         }}     
 
-
         do{                                                                     // Bucle principal de actualización de datos.
             
             System.out.println("Para salir introduce '-1' en cualquier entrada del datos");
             System.out.println();
  
-            System.out.print(AZUL + "Indica la Línea o Array de 1-20 ");        // Indica la fila, sale con -1
+            System.out.print(VERDE + "Indica la Línea o Array de 1-20 ");        // Indica la fila, sale con -1
             linea = kl.nextInt();
             if(linea == -1){break;}
             
@@ -52,7 +51,7 @@ public class Ejercicio07 {
             if(columna == -1){break;}
             
             do{                                                                 // Introduce el data desde -1 hasta 999 de lo contrario repite 
-            System.out.print(RESET + "Indica el valor del Registro <1000 ");
+            System.out.print(AZUL + "Indica el valor del Registro <1000 ");
             data = kl.nextInt();
             if(data == -1){break;}
             }while (data < 0 || data > 999);
@@ -62,11 +61,12 @@ public class Ejercicio07 {
         
         }while(true);                                                           // cierra el Bucle sin condición
         
-        System.out.printf("\n\nmatriz");
         
         for (int i =0; i < numeros.length; i++){                                // Bucle exterior impresión de Matriz (filas).
         
-            System.out.printf("\t{");
+            System.out.printf("\n\nmatriz[");
+            if(i<10){System.out.print(" ");}
+            System.out.printf("%d]{", i);
             
             for (int j = 0; j < numeros[i].length; j++){                         // Bucle anidado interior (columnas). 
 
@@ -91,7 +91,7 @@ public class Ejercicio07 {
                     System.out.print(ROJO);
                 }else{System.out.print(RESET);}
                 
-                System.out.printf("%d, ", numeros[i][j]);                        // Impresión de los valores seleccionados de la Matriz. 
+                System.out.printf("%d, ", numeros[i][j]);                       // Impresión de los valores seleccionados de la Matriz. 
                 
             }
         
