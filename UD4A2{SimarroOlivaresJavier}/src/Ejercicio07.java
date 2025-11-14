@@ -61,12 +61,13 @@ public class Ejercicio07 {
         
         }while(true);                                                           // cierra el Bucle sin condición
         
+        System.out.println();System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
         
         for (int i =0; i < numeros.length; i++){                                // Bucle exterior impresión de Matriz (filas).
         
-            System.out.printf("\n\nmatriz[");
-            if(i<10){System.out.print(" ");}
-            System.out.printf("%d]{", i);
+            System.out.printf("%snumeros[", AZUL);
+            if(i<9){System.out.print(" ");}
+            System.out.printf("%d]%s{", i+1,RESET);
             
             for (int j = 0; j < numeros[i].length; j++){                         // Bucle anidado interior (columnas). 
 
@@ -95,10 +96,12 @@ public class Ejercicio07 {
                 
             }
         
-            System.out.printf("\b\b}\n\n");
+            System.out.printf("\b\b}\n");
             
         }
         
+        System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
+        System.out.println();System.out.println();
     }
     
     
