@@ -109,6 +109,9 @@ public class Ejercicio07 {
         
         System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
         System.out.println();System.out.println();
+        
+        kl.close();                                                             // Cierra la instancia Scanner.
+        
     }
     
     
