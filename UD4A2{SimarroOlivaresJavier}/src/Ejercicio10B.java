@@ -13,7 +13,7 @@ import java.util.Scanner;
  * 
  * @author macky
  */
-public class Ejercicio10 {
+public class Ejercicio10B {
     
     public static final String RESET = "\u001B[0m";
     public static final String ROJO = "\u001B[31m";
@@ -22,21 +22,16 @@ public class Ejercicio10 {
     public static void main(String[] args){                                     // Declara el método main.
         
         Scanner kl = new Scanner(System.in);                                    // inicia la instancia Scanner.
-        String[][] reemplazos = {{"as","AS","As","aS"}, {"es","ES","Es","es"}};
         
-        System.out.println("Escribe tu frase: ");                                 // solicita y carga el scripts.
+        System.out.println("Escribe tu frase");                                 // solicita y carga el scripts.
         String frase = kl.nextLine();
-        String resultado = "";
         
         // reemplaza as por es... en todas las posibilidades.
-        for (int i = 0; i < reemplazos.length; i++){
-            resultado = frase.replace(reemplazos[0][i],reemplazos[1][i]);
-        }
-        
+        String resultado = frase.replace("as","es").replace("AS", "ES").replace("As", "Es").replace("aS", "eS");
+
         System.out.println();System.out.println();                              // imprime el resulda.
         System.out.println(resultado);
         
     }
     
 }
-//El Astro viene hasta LAS maScotas 
