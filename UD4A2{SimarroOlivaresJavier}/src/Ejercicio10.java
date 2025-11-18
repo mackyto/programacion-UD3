@@ -22,21 +22,27 @@ public class Ejercicio10 {
     public static void main(String[] args){                                     // Declara el método main.
         
         Scanner kl = new Scanner(System.in);                                    // inicia la instancia Scanner.
-        String[][] reemplazos = {{"as","AS","As","aS"}, {"es","ES","Es","es"}};
+        String[][] reemplazos = {{"as","AS","As","aS"}, {"es","ES","Es","eS"}};
         
         System.out.println("Escribe tu frase: ");                                 // solicita y carga el scripts.
         String frase = kl.nextLine();
         String resultado = "";
         
         // reemplaza as por es... en todas las posibilidades.
-        for (int i = 0; i < reemplazos.length; i++){
+        for (int i = 0; i < reemplazos[0].length; i++){
+
             resultado = frase.replace(reemplazos[0][i],reemplazos[1][i]);
+            frase = resultado;
+          
         }
         
         System.out.println();System.out.println();                              // imprime el resulda.
-        System.out.println(resultado);
-        
+        System.out.println(resultado);        
+        System.out.println();System.out.println();
+
     }
     
 }
 //El Astro viene hasta LAS maScotas 
+
+// AS As as aS
