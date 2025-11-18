@@ -40,6 +40,8 @@ public class Ejercicio10 {
         System.out.println(resultado);        
         System.out.println();System.out.println();
 
+        kl.close();
+    
     }
     
 }
