@@ -15,22 +15,29 @@ import java.util.ArrayList;
  */
 public class Ejercicio01 {
     
-    public static void main(String[] args){
+    public static void main(String[] args){                                     // Declaración del metodo.
         
-        Scanner kl = new Scanner(System.in);
+        Scanner kl = new Scanner(System.in);                                    // inicia instancia Scanner
         
-        ArrayList<Integer> numeros =  new ArrayList<>();
+        ArrayList<Integer> numeros =  new ArrayList<>();                        // Declara el array list
         
-        for (int i = 0; i < numeros.size(); i++){
+        // Bucle de rellenado de datos
+        do{                 
             
-            System.out.print("Introduce el numero " + i);
-            numeros.add(1) = kl.nextInt();
+            System.out.print("Introduce un numero ");
+            numeros.add(kl.nextInt());
             
+            
+        }while(numeros.size() < 10);
+        //Termina al llegar a 10 numeros en la lista
+        
+        // Bucle de impresión de datos
+        for(int i = 0; i< numeros.size(); i++){
+            
+            System.out.println(numeros.get(i));
             
         }
-        
+       
     }
-    
-    
-    
+   
 }
