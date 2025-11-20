@@ -13,6 +13,7 @@ import java.util.ArrayList;
  * 
  * @author macky
  */
+
 public class Ejercicio02 {
     
     public static void main(String[] args){                                     // Declara el método.
