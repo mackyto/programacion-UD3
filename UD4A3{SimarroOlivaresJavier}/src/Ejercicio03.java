@@ -5,6 +5,7 @@
 
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  *
@@ -21,7 +22,29 @@ public class Ejercicio03 {
     // Declaración del método main.
     public static void main(String[] args){
         
-        Scanner kl
+        // Define la instancia ylas variables necesarias para completar el ejercicio poropuesto.
+        Scanner kl = new Scanner(System.in);
+        ArrayList<Integer> lista = new ArrayList<>();
+        
+        // Solicita el primer parametro (Cantidad de registros).
+        System.out.print("Define el número de elementos de la línea ");
+        int cantidad = kl.nextInt();
+        
+        // Bucle de introducción de datos.
+        for (int i = 0; i < cantidad; i++){
+            System.out.print("Introduce el valor para el elemento " + i + " ");
+            lista.add(kl.nextInt());
+        }
+         
+        // Inicia las variables necesarias y el iterador
+        int i = 0;
+        Iterator tamano = lista.iterator();
+        
+        
+         do{
+            System.out.println(lista.get(i));
+                 
+        }while (tamano.hasNext());
         
     }
 

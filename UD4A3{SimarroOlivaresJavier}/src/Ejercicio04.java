@@ -34,7 +34,8 @@ public class Ejercicio04 {
         do{numero = kl.nextDouble();}while(numero < 0 || numero >= 1);
         
         // Bucle contador de magnitudes superiores a número.
-        for (int i = 0; i < lista.size(); i++){if(lista.get(i)>numero){cantidad++;}
+        for (int i = 0; i < lista.size(); i++){
+            if(lista.get(i)>numero){cantidad++;}
         }
         
         // Imprime el resultado.
