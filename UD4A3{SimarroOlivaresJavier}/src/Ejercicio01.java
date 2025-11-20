@@ -37,7 +37,10 @@ public class Ejercicio01 {
             System.out.println(numeros.get(i));
             
         }
-       
+
+        // cierra la instancia Scanner
+        kl.close();
+        
     }
    
 }

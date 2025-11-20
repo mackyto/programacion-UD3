@@ -38,6 +38,9 @@ public class Ejercicio02 {
         
         System.out.println(acumulador);                                         // Imprime el resultado.
         
+        // Cierra la instancio Scanner.
+        kl.close();
+        
     }
     
     
