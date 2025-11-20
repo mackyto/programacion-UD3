@@ -16,7 +16,7 @@ import java.util.Iterator;
  * @author javsimoli
  */
 
-public class Ejercicio03 {
+public class Ejercicio03B {
 
     
     // Declaración del método main.
@@ -27,18 +27,25 @@ public class Ejercicio03 {
         ArrayList<Integer> lista = new ArrayList<>();
         
         // Solicita el primer parametro (Cantidad de registros).
-        System.out.print("Define el número de elementos de la lísta ");
+        System.out.print("Define el número de elementos de la línea ");
         int cantidad = kl.nextInt();
         
         // Bucle de introducción de datos.
         for (int i = 0; i < cantidad; i++){
-            System.out.print("Introduce el valor para el elemento " + i + " => ");
+            System.out.print("Introduce el valor para el elemento " + i + " ");
             lista.add(kl.nextInt());
         }
-         
-        // Bucle de impresión de los valores de la lista.
-        for (int i = 0; i < lista.size(); i++){System.out.println(lista.get(i));}
+               
+                // Inicia las variables necesarias y el iterador
+        int i = 0;
+        Iterator tamano = lista.iterator();       
         
+        // Bucle de impresión de valores de la lista
+         do{System.out.println(lista.get(i++));}while (tamano.hasNext());
+        
+        kl.close();
+         
     }
-  
+
+    
 }
