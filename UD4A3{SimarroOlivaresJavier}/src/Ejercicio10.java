@@ -24,7 +24,7 @@ public class Ejercicio10 {
         System.out.println("Introduce la frase de verificación");
         cadena = kl.nextLine();
         
-        if (cadena.matches("0-9{8}")){
+        if (cadena.matches("[0-9]{8}")){
             System.out.println("Válido");
         }else{System.out.println("Inválido");}
         
