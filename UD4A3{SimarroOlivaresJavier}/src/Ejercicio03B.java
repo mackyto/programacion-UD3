@@ -27,7 +27,7 @@ public class Ejercicio03B {
         ArrayList<Integer> lista = new ArrayList<>();
         
         // Solicita el primer parametro (Cantidad de registros).
-        System.out.print("Define el número de elementos de la línea ");
+        System.out.print("Define el número de elementos de la lísta ");
         int cantidad = kl.nextInt();
         
         // Bucle de introducción de datos.
@@ -41,7 +41,7 @@ public class Ejercicio03B {
         Iterator tamano = lista.iterator();       
         
         // Bucle de impresión de valores de la lista
-         do{System.out.println(lista.get(i++));}while (tamano.hasNext());
+         do{System.out.println(tamano.next());}while (tamano.hasNext());
         
         kl.close();
          
