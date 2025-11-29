@@ -3,7 +3,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-public class HttpGet { public static void main(String[] args) throws Exception {
+public class http_get { public static void main(String[] args) throws Exception {
 HttpClient cliente = HttpClient.newHttpClient();
 HttpRequest peticion = HttpRequest.newBuilder()
 .uri(URI.create("https://www.example.com"))
