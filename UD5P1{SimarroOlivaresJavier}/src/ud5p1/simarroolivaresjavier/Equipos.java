@@ -11,6 +11,31 @@ package ud5p1.simarroolivaresjavier;
 public class Equipos {
     
     private String nombre;
-    private
+    private String categoria;
+    
+    // Constructor.
+    public void equipos(String nombre, String categoria){
+        this.nombre = nombre;
+        this.categoria = categoria;
+    }   
+    
+    //Setters.
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    }
+    
+    public void setCategoria(String categoria){
+        this.categoria = categoria;
+    }
+    
+    // Getters.
+    public String getNombre(){
+        return nombre;
+    }
+    
+    public String getCategoria(){
+        return categoria;
+    }
+    
     
 }
