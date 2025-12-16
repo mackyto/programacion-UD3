@@ -59,17 +59,21 @@ public class Equipos {
         futbolista.add(jugador);
     }
 
-    public void eliminaJugador (int id){
+    public void eliminaJugador (Jugadores jugador){
+        futbolista.remove(jugador);
+    }
+
+    public void eliminaJugadorId (int id){
         futbolista.remove(id);
     }
     
-    public int buscaJugadorNombre (String nombre){
+    public Jugadores buscaJugadorNombre (String nombre){
         for (Jugadores f: futbolista){
             if (f.getNombre().equals(nombre)){
-                return f.getId();
+                return f;
             }
         }
-        return -1;
+        return null;
     }
     
     

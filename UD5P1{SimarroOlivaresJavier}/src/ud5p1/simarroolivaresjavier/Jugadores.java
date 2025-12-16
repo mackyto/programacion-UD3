@@ -23,7 +23,7 @@ public class Jugadores {
     // Constructor.
     public Jugadores(String nombre, String apellidos, String posicion, int edad, Equipos equipo) {
 
-        id = ++ultimoId;
+        id = ultimoId++;
         
         this.nombre = nombre;
         this.apellidos = apellidos;
