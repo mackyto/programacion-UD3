@@ -4,6 +4,9 @@
  */
 package ud5p1.simarroolivaresjavier;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author 29160712r
@@ -12,11 +15,13 @@ public class Equipos {
     
     private String nombre;
     private String categoria;
+    private List<Jugadores> futbolistas;
     
     // Constructor.
-    public void equipos(String nombre, String categoria){
+    public Equipos(String nombre, String categoria, List<Jugadores> futbolistas){
         this.nombre = nombre;
         this.categoria = categoria;
+        this.futbolistas = futbolistas;
     }   
     
     //Setters.
@@ -27,6 +32,10 @@ public class Equipos {
     public void setCategoria(String categoria){
         this.categoria = categoria;
     }
+
+    public void setFutbolistas(List<Jugadores> futbolistas){
+        this.futbolistas = futbolistas;
+    }
     
     // Getters.
     public String getNombre(){
@@ -35,6 +44,10 @@ public class Equipos {
     
     public String getCategoria(){
         return categoria;
+    }
+
+    public List<Jugadores> getFutbolistas(){
+        return futbolistas;
     }
     
     

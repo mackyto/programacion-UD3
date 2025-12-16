@@ -19,12 +19,12 @@ public class Partidos {
 //    private Equipos equipoLocal = new Equipos(nombre, categoria);
 //    private Equipos equipoVisitante = new Equipos(nombre, categoria);
 //    private Arbitros arbitro = new Arbitros(nombre, apellidos, edad, departamento);
-    String equipoLocal;
-    String equipoVisitante;
-    String Arbitro;
+    Equipos equipoLocal;
+    Equipos equipoVisitante;
+    Arbitros Arbitro;
     
     // Constructor.
-    public void partidos (int jornada, LocalDateTime fechaPartido, int golesLocal, int golesVisitante, String equipoLocal, String equipoVisitante, String Arbitro){
+    public Partidos (int jornada, LocalDateTime fechaPartido, int golesLocal, int golesVisitante, Equipos equipoLocal, Equipos equipoVisitante, Arbitros Arbitro){
         this.jornada = jornada;
         this.fechaPartido = fechaPartido;
         this.golesLocal = golesLocal;
@@ -51,15 +51,15 @@ public class Partidos {
         this.golesVisitante = golesVisitante;
     }    
         
-    public void setEquipoLocal (String equipoLocal){    
+    public void setEquipoLocal (Equipos equipoLocal){    
         this.equipoLocal = equipoLocal;
     }
     
-    public void setEquipoVisitante (String equipoVisitante){
+    public void setEquipoVisitante (Equipos equipoVisitante){
         this.equipoVisitante = equipoVisitante;
     }    
     
-    public void setArbitro (String Arbitro){
+    public void setArbitro (Arbitros Arbitro){
         this.Arbitro = Arbitro;
     }
     
@@ -80,18 +80,20 @@ public class Partidos {
         return golesVisitante;
     }    
         
-    public String getEquipoLocal (){    
+    public Equipos getEquipoLocal (){    
         return equipoLocal;
     }
     
-    public String setEquipoVisitante (){
+    public Equipos setEquipoVisitante (){
         return equipoVisitante;
     }    
     
-    public String getArbitro (){
+    public Arbitros getArbitro (){
         return Arbitro;
     }
     
+    
+    // Metodos de la clase.
     public void GolLocal(){
         golesLocal ++;
     }
@@ -114,14 +116,16 @@ public class Partidos {
             concat(", ").
             concat(String.valueOf(fechaPartido)).
             concat(", ").
-            concat(equipoLocal).
+            concat(equipoLocal.getNombre()).
             concat(" Vs  ").
-            concat(equipoVisitante).
+            concat(equipoVisitante.getNombre()).
             concat(String.valueOf(golesLocal)).
             concat("/").
             concat(String.valueOf(golesVisitante)).
             concat(" Arbitro ").
-            concat(Arbitro);
+            concat(Arbitro.getNombre().
+            concat(", ").
+            concat(Arbitro.getApellidos()));
         
     }    
     

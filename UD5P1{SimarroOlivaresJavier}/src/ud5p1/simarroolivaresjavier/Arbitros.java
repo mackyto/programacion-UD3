@@ -8,6 +8,7 @@ package ud5p1.simarroolivaresjavier;
  *
  * @author 29160712r
  */
+
 public class Arbitros {
     
     // Datos de la clase.
@@ -17,7 +18,7 @@ public class Arbitros {
     private String departamento;
     
     // Constructor.
-    public void Arbitros (String nombre, String apellidos, int edad, String departamento) {
+    public Arbitros (String nombre, String apellidos, int edad, String departamento) {
     
             this.nombre = nombre;
             this.apellidos = apellidos;

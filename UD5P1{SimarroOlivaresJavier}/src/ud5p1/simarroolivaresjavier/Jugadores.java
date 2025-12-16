@@ -15,10 +15,10 @@ public class Jugadores {
     private String apellidos;
     private String posicion;
     private int edad;
-    private String equipo;
+    private Equipos equipo;
     
     // Constructor.
-    public void Arbitros (String nombre, String apellidos, String posicion, int edad, String equipo) {
+    public Jugadores (String nombre, String apellidos, String posicion, int edad, Equipos equipo) {
     
             this.nombre = nombre;
             this.apellidos = apellidos;
@@ -37,7 +37,7 @@ public class Jugadores {
 
     public void setEdad(int edad){this.edad = edad;}
 
-    public void setequipo(String equipo){this.equipo = equipo;}    
+    public void setEquipo(Equipos equipo){this.equipo = equipo;}    
         
     // Getters.
     public String getNombre(){return nombre;}
@@ -48,8 +48,10 @@ public class Jugadores {
 
     public int getEdad(){return edad;}
        
-    public String getEquipo(){return equipo;}
-       
+    public Equipos getEquipo(){return equipo;}
+
+    
+    // Metodos de la clase.
     public String getAll(){
         
         return 
@@ -60,8 +62,10 @@ public class Jugadores {
             concat(posicion).
             concat(String.valueOf(edad)).
             concat("años, Equipo ").
-            concat(equipo);
-        
+            concat(equipo.getNombre()
+            
+            );
+
     }
     
 }
