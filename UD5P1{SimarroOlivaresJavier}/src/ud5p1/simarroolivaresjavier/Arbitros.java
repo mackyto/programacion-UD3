@@ -25,7 +25,16 @@ public class Arbitros {
             this.departamento = departamento;
     
     }
+           
+    // Setters.   
+    public void setNombre(String nobre){this.nombre = nombre;}
     
+    public void setApellidos(String apellidos){this.apellidos = apellidos;}
+      
+    public void setEdad(int edad){this.edad = edad;}
+    
+    public void setDepartamento(String departamento){this.departamento = departamento;}   
+        
     // Getters.
     public String getNombre(){return nombre;}
     
@@ -47,14 +56,5 @@ public class Arbitros {
             concat(departamento);
         
     }
-           
-    // Setters.   
-    public void setNombre(String nobre){this.nombre = departamento;}
-    
-    public void setApellidos(String apellidos){this.apellidos = apellidos;}
-      
-    public void setEdad(int edad){this.edad = edad;}
-    
-    public void setDepartamento(String departamento){this.departamento = departamento;}   
     
 }

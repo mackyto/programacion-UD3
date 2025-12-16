@@ -22,7 +22,8 @@ public class Partidos {
     String equipoLocal;
     String equipoVisitante;
     String Arbitro;
-
+    
+    // Constructor.
     public void partidos (int jornada, LocalDateTime fechaPartido, int golesLocal, int golesVisitante, String equipoLocal, String equipoVisitante, String Arbitro){
         this.jornada = jornada;
         this.fechaPartido = fechaPartido;
@@ -33,6 +34,7 @@ public class Partidos {
         this.Arbitro = Arbitro;
     }
     
+    // Setters.
     public void setJornada (int jornada){
         this.jornada = jornada;
     }    
@@ -61,8 +63,66 @@ public class Partidos {
         this.Arbitro = Arbitro;
     }
     
+    // getters.
+    public int getJornada (){
+        return jornada;
+    }    
+        
+    public LocalDateTime getFechaPartido (){
+        return fechaPartido;
+    }
+        
+    public int getGGolesLocal (){    
+        return golesLocal;
+    }
     
+    public int getGolesVisitante (){
+        return golesVisitante;
+    }    
+        
+    public String getEquipoLocal (){    
+        return equipoLocal;
+    }
     
+    public String setEquipoVisitante (){
+        return equipoVisitante;
+    }    
     
+    public String getArbitro (){
+        return Arbitro;
+    }
+    
+    public void GolLocal(){
+        golesLocal ++;
+    }
+    
+    public void GolVisitante(){
+        golesVisitante ++;
+    }
+    public void anularGolesLocal(){
+        golesLocal --;
+    }
+    public void anularGolesVisitante(){
+        golesVisitante --;
+    }
+    
+    public String DatosPârtido(){
+                
+        return 
+            "Jornada: ".
+            concat(String.valueOf(jornada)).
+            concat(", ").
+            concat(String.valueOf(fechaPartido)).
+            concat(", ").
+            concat(equipoLocal).
+            concat(" Vs  ").
+            concat(equipoVisitante).
+            concat(String.valueOf(golesLocal)).
+            concat("/").
+            concat(String.valueOf(golesVisitante)).
+            concat(" Arbitro ").
+            concat(Arbitro);
+        
+    }    
     
 }
