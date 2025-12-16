@@ -12,42 +12,64 @@ import java.util.List;
  * @author 29160712r
  */
 public class Equipos {
-    
+
     private String nombre;
     private String categoria;
-    private List<Jugadores> futbolistas;
-    
+    private List<Jugadores> futbolista;
+
     // Constructor.
-    public Equipos(String nombre, String categoria, List<Jugadores> futbolistas){
+    public Equipos(String nombre, String categoria, List<Jugadores> futbolista) {
         this.nombre = nombre;
         this.categoria = categoria;
-        this.futbolistas = futbolistas;
-    }   
-    
+        this.futbolista = futbolista;
+    }
+
     //Setters.
-    public void setNombre(String nombre){
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    
-    public void setCategoria(String categoria){
+
+    public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
 
-    public void setFutbolistas(List<Jugadores> futbolistas){
-        this.futbolistas = futbolistas;
+    public void setFutbolistas(List<Jugadores> futbolista) {
+        this.futbolista = futbolista;
     }
-    
+
     // Getters.
-    public String getNombre(){
+    public String getNombre() {
         return nombre;
     }
-    
-    public String getCategoria(){
+
+    public String getCategoria() {
         return categoria;
     }
 
-    public List<Jugadores> getFutbolistas(){
-        return futbolistas;
+    public List<Jugadores> getJugadores() {
+        return futbolista;
+    }
+    
+    public Jugadores getFutbolistas(int id){
+        return futbolista.get(id);
+    }
+    
+    // Metodos de la clase.
+    public void añadeJugador (Jugadores jugador){
+        futbolista.add(jugador);
+    }
+
+    public void eliminaJugador (int id){
+        futbolista.remove(id);
+    }
+    
+    public int buscaJugadorNombre (String nombre){
+        for (Jugadores f: futbolista){
+            if (f.getNombre().equals(nombre)){
+                return f.getId();
+            }
+        }
+        return -1;
     }
     
     
