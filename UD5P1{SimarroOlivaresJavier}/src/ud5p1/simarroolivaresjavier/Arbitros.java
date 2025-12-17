@@ -60,7 +60,6 @@ public class Arbitros {
         return departamento;
     }
 
-    
     // Métodos de la clase.
     public String getAll() {
 
