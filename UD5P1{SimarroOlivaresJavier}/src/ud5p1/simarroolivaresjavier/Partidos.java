@@ -40,7 +40,7 @@ public class Partidos {
         this.fechaPartido = fechaPartido;
     }
 
-    public void setGGolesLocal(int golesLocal) {
+    public void setGolesLocal(int golesLocal) {
         this.golesLocal = golesLocal;
     }
 
@@ -69,7 +69,7 @@ public class Partidos {
         return fechaPartido;
     }
 
-    public int getGGolesLocal() {
+    public int getGolesLocal() {
         return golesLocal;
     }
 
@@ -106,7 +106,7 @@ public class Partidos {
         golesVisitante--;
     }
 
-    public String DatosPârtido() {
+    public String DatosPartido() {
 
         return "Jornada: ".
                 concat(String.valueOf(jornada)).
