@@ -16,12 +16,9 @@ public class Partidos {
     private LocalDateTime fechaPartido;
     private int golesLocal;
     private int golesVisitante;
-//    private Equipos equipoLocal = new Equipos(nombre, categoria);
-//    private Equipos equipoVisitante = new Equipos(nombre, categoria);
-//    private Arbitros arbitro = new Arbitros(nombre, apellidos, edad, departamento);
-    Equipos equipoLocal;
-    Equipos equipoVisitante;
-    Arbitros Arbitro;
+    private Equipos equipoLocal;
+    private Equipos equipoVisitante;
+    private Arbitros Arbitro;
 
     // Constructor.
     public Partidos(int jornada, LocalDateTime fechaPartido, int golesLocal, int golesVisitante, Equipos equipoLocal, Equipos equipoVisitante, Arbitros Arbitro) {
@@ -101,11 +98,11 @@ public class Partidos {
         golesVisitante++;
     }
 
-    public void anularGolesLocal() {
+    public void anularGolLocal() {
         golesLocal--;
     }
 
-    public void anularGolesVisitante() {
+    public void anularGolVisitante() {
         golesVisitante--;
     }
 
@@ -124,8 +121,8 @@ public class Partidos {
                 concat(String.valueOf(golesVisitante)).
                 concat(" Arbitro ").
                 concat(Arbitro.getNombre().
-                        concat(", ").
-                        concat(Arbitro.getApellidos()));
+                concat(", ").
+                concat(Arbitro.getApellidos()));
 
     }
 

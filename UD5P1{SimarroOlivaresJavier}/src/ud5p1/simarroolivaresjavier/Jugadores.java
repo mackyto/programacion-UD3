@@ -93,8 +93,7 @@ public class Jugadores {
                 concat(posicion).
                 concat(String.valueOf(edad)).
                 concat("años, Equipo ").
-                concat(equipo.getNombre()
-                );
+                concat(equipo.getNombre());
 
     }
 
